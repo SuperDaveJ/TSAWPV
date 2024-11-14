@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/popFile.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Popup Information</title>
+<!-- InstanceEndEditable -->
+<link href="../tsa_style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="../tsa_script.js"></script>
+<style>
+	body {
+		background: none;
+		background-color:#ffffff;
+	}
+</style>
+
+<script language="javascript">
+function closePopup() {
+	if (gDef != 1) {
+		window.opener.aStop();
+	}
+	self.close();
+}
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+<!--
+
+var gDef = getQueryValue('popterm')
+var arrPopup = new Array();
+var numTern = 2;
+for (var i=0; i<numTern; i++) {
+	arrPopup[i] = "";
+}
+
+arrPopup[1]  = "<p class='popupH'>Audio Transcript</p> <p>Now let’s revisit the real-life story based on the newspaper account 'Fired Accountant Charged with Murder.'  Two supervisors fired Anthony LaCalamita III on Thursday.  He returned to work the next Monday intending to kill the supervisors and anyone else who got in the way.</p>  <p>LaCalamita’s grievance derived from his termination from the accounting firm.</p>  <p>The ideation occurred when the fired employee decided to buy the 12-gauge shotgun to resolve his grievance.</p> <p>LaCalamita used his knowledge of the office layout and the location of each supervisor’s office to plan his attack.  He also planned the date and timing of the attack.</p> <p>LaCalamita prepared for the attack by purchasing the shotgun and a box of shells and arranging transportation to the office building.</p> <p>The breach occurred when LaCalamita returned to the company the Monday after he was fired and went directly to the offices of the two supervisors.</p> <p>In the attack, the aggressor wounded the two supervisors and killed the receptionist.</p> <p>In just a few days, the aggressor had nursed a grievance, developed the idea of using violence, conducted his research and planning, prepared for the attack, breached the company’s security, and launched the attack.</p>";
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="MM_preloadImages('../images/close_2.jpg')">
+<div id="noGraphicPopupText" style="position:relative; top:20px; left:-5px; width:550px; height:200px; text-align:left">
+  <p align="left" class="popupH">&nbsp;</p>
+  <script language="javascript" type="text/javascript" >
+		document.getElementById('noGraphicPopupText').innerHTML = arrPopup[gDef];
+    </script>
+  
+  <div id="btnClose" class="CloseButton">
+  	<p>&nbsp;</p>
+    <div align="center"><a href="javascript:closePopup();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('CButton','','../images/close_2.jpg',1)"><img src="../images/close_1.jpg" alt="Close Button" name="CButton" border="0" id="CButton" /></a></div>
+    <br />
+  </div>
+
+</div>
+
+<!-- InstanceBeginEditable name="ForScript" -->
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

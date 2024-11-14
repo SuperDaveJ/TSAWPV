@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>TSA Workplace Violence Prevention Program</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="tsa_style.css" title="tsaCSS" />
+<script language="javascript" type="text/javascript" src="APIWrapper.js"></script>
+<script language="javascript" type="text/javascript" src="SCOFunctions.js"></script>
+<script language="javascript" type="text/javascript" src="AC_RunActiveContent.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="tsa_script.js"></script>
+<script language="javascript" type="text/javascript" src="tsaLMSfunctions.js"></script>
+
+<style type="text/css">
+body {
+	
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-repeat: no-repeat;
+	color:#000000;
+}
+
+#header {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:4;
+	left: 50px;
+	top: 30px;
+}
+
+#buttons_bkgrnd {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:0;
+	left: 523px;
+	top: 55px;
+}
+
+.sum_title {
+	text-align: right;
+	font-size: 12px;
+	font-weight: bold;
+	color:#c37325;
+	line-height: 1.1;
+}
+.sum_text {
+	text-align: left;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+}
+
+#exit a:link {
+	color: #FFFFFF; 
+	text-decoration:none;
+}
+
+#exit a:visited { 
+	color: #FFFFFF; 
+	text-decoration:none; 
+}
+
+#exit a:hover { 
+	color: #CC3300;
+	text-decoration:underline;            
+}
+
+#play {
+	position:absolute;
+	left:11px;
+	top:547px; 
+	width:31px; 
+	height:1px; 
+	z-index:1;
+	visibility: visible;
+}
+
+#disclaimer {
+	position:absolute;
+	visibility: visible;
+	z-index: 10;
+	height: 85px;
+	width: 405px;
+	left: 394px;
+	top: 453px;
+	color: #990033;
+}
+</style>
+
+<script src="AC_RunActiveContent.js" type="text/javascript"></script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+initializePage();
+
+MM_preloadImages('images/main.jpg', 'images/mm1_2.jpg','images/mm2_2.jpg','images/mm3_2.jpg', 'images/mm4_2.jpg', 'images/mm5_2.jpg','lesson1_complete.jpg', 'lesson1_complete_2.jpg','lesson2_complete.jpg', 'lesson3_complete_2.jpg','lesson3_complete.jpg', 'lesson3_complete_2.jpg','lesson4_complete.jpg', 'lesson4_complete_2.jpg');
+
+MM_reloadPage(true);
+
+function startPage() {
+	document.getElementById("pause1").style.visibility = "visible";
+	document.getElementById("replay").style.visibility = "visible";
+	document.getElementById("cc").style.visibility = "visible";
+}
+
+function gotoLesson(iLesson) {
+	pgURL = 'lesson' + iLesson + '/l' + iLesson + '010.htm';
+	if ( (iLesson > 1) && (arrLessonStatus[iLesson-1] < 2) ) {
+		alert("You cannot go to lesson " + iLesson + ".\rYou must complete lesson " + (iLesson-1) + " first.");
+		return;
+	} else {
+		window.location = pgURL + '?inLMS=' + inLMS;
+	}
+}
+
+//This funciton should be placed in the page onload event.  It's not used now.
+function updateMenu() {
+	closing = false;
+	if (inLMS == 'yes') { // LMS version
+		//display completion status. nLesson=5 including quick tour which has index of 0
+		for (i=0; i<nLesson; i++) {
+			if (arrLessonStatus[i] >= 2) {
+				eval("document.getElementById('les" + i + "').style.visibility = 'hidden'");
+				eval("document.getElementById('completed" + i + "').style.visibility = 'visible'");
+			} else {
+				eval("document.getElementById('completed" + i + "').style.visibility = 'hidden'");
+				eval("document.getElementById('les" + i + "').style.visibility = 'visible'");
+			}
+		}
+	}
+}
+
+//Show summary info
+arrSummary = new Array(nLesson+1)
+for (var i=0; i<nLesson+1; i++) {
+	arrSummary[i] = new Array(5)
+}
+arrSummary[0][0] = "Quick Tour:"
+arrSummary[0][1] = "Overview of Web Based Training (WBT)"
+arrSummary[0][2] = "Summary:"
+arrSummary[0][3] = "This lesson provides you with an overview of the standard conventions for WBT.<br /><br />This lesson is 5 minutes long."
+
+arrSummary[1][0] = "Lesson 1:"
+arrSummary[1][1] = "Course Overview"
+arrSummary[1][2] = "Summary:"
+arrSummary[1][3] = "This lesson provides you with an overview of the course.<br /><br />This lesson is 5 minutes long."
+
+arrSummary[2][0] = "Lesson 2:"
+arrSummary[2][1] = "What is Workplace Violence?"
+arrSummary[2][2] = "Summary:"
+arrSummary[2][3] = "This lesson defines workplace violence and familiarizes you with the spectrum of behaviors that TSA associates with workplace violence.<br /><br />This lesson is 10 minutes long."
+
+arrSummary[3][0] = "Lesson 3:"
+arrSummary[3][1] = "Understanding the Paths to Workplace Violence"
+arrSummary[3][2] = "Summary:"
+arrSummary[3][3] = "This lesson distinguishes between the two paths to workplace violence and identifies the various steps on those paths.<br /><br />This lesson is 20 minutes long."
+
+arrSummary[4][0] = "Lesson 4:"
+arrSummary[4][1] = "Preventing Workplace Violence"
+arrSummary[4][2] = "Summary:"
+arrSummary[4][3] = "This lesson provides actions to take if you see signs of potential violence in the workplace and identifies which behaviors to report.<br /><br />This lesson is 20 minutes long."
+
+arrSummary[5][0] = ""
+arrSummary[5][1] = ""
+arrSummary[5][2] = ""
+arrSummary[5][3] = ""
+
+function showSummary(iWhich) {
+	document.getElementById("les_id").innerHTML = arrSummary[iWhich][0];
+	document.getElementById("les_title").innerHTML = arrSummary[iWhich][1];
+	document.getElementById("sum_title").innerHTML = arrSummary[iWhich][2];
+	document.getElementById("sum_text").innerHTML = arrSummary[iWhich][3];
+	document.getElementById("les_sum").style.visibility = "visible";
+}
+
+function hideSummary() {
+	document.getElementById("les_id").innerHTML = arrSummary[5][0];
+	document.getElementById("les_title").innerHTML = arrSummary[5][1];
+	document.getElementById("sum_title").innerHTML = arrSummary[5][2];
+	document.getElementById("sum_text").innerHTML = arrSummary[5][3];
+	//document.getElementById("les_sum").style.visibility = "hidden";
+}
+
+//-->
+</script>
+
+</head>
+
+<body onLoad="startPage(); updateMenu(); showSummary(5)" onUnload="if (closing) exitCourse(false)">
+<br>
+<div id="wrapper_menu">
+<div id="les_sum" style="position:absolute; left:-8px; top:77px; width:363px; height:182px; z-index:5; visibility:hidden;">
+
+	<div id="les_id" style="position:absolute; left:0px; top:0px; width:80px; height:20px; z-index:5; visibility:inherit;" class="sum_title">Lesson 1</div>
+	<div id="les_title" style="position:absolute; left:91px; top:0px; width:272px; height:20px; z-index:5; visibility:inherit;" class="sum_text">Lesson title</div>
+	<div id="sum_title" style="position:absolute; left:0px; top:25px; width:80px; height:35px; z-index:5; visibility:inherit;" class="sum_title">Summary</div>
+	<div id="sum_text" style="position:absolute; left:91px; top:25px; width:273px; height:142px; z-index:5; visibility:inherit;" class="sum_text">Summary Text here.</div>
+
+</div>
+
+<!--************* Regular Layers ********************-->
+<!-- Quick Tour -->
+<div id="les0"  style="position:absolute; width:66px; height:64px; top: 463px; left: 90px; z-index:2; visibility:visible;"><a href="javascript:gotoLesson(0)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('qtour','','images/mm1_2.jpg',1); showSummary(0)"><img src="images/mm1_0.jpg" alt="Quick Tour. Learner has not completed this lesson. Summary: This lesson provides you with an overview of the standard conventions for web-based training (WBT)." name="qtour" width="45" height="43" border="0" ></a></div>
+
+<!-- Lesson 1 -->
+<div id="les1"  style="position:absolute; width:66px; height:64px; top: 353px; left: 222px; z-index:2; visibility:visible;"><a href="javascript:gotoLesson(1)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('L1','','images/mm2_2.jpg',1); showSummary(1)"><img src="images/mm2_0.jpg" alt="Lesson 1: Course Overview. Learner has not completed this lesson. Summary: This lesson provides you with an overview of the course." name="L1" width="45" height="46" border="0" ></a></div>
+
+<!-- Lesson 2 -->
+<div id="les2" style="position:absolute; width:53px; height:48px; top: 329px; left: 398px; z-index:2; visibility:visible;"><a href="javascript:gotoLesson(2)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('L2','','images/mm3_2.jpg',1); showSummary(2)"><img src="images/mm3_0.jpg" alt="Lesson 2: What is Workplace Violence? Learner has not completed this lesson. Summary: This lesson defines workplace violence and familiarizes you with the spectrum of behaviors that TSA associates with workplace violence." name="L2" width="46" height="45" border="0" ></a></div>
+
+<!-- Lesson 3 -->
+<div id="les3" style="position:absolute; width:56px; height:49px; left:532px; top:230px; z-index:2; visibility:visible;"><a href="javascript:gotoLesson(3)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('L3','','images/mm4_2.jpg',1); showSummary(3)"><img src="images/mm4_0.jpg" alt="Lesson 3: Understanding the Paths to Workplace Violence. Learner has not completed this lesson. Summary: This lesson distinguishes between the two paths to violence and identifies the various steps on those paths." name="L3" width="50" height="49" border="0" ></a></div>
+
+<!-- Lesson 4 -->
+<div id="les4" style="position:absolute; width:45px; height:45px; left:694px; top:258px; z-index:2; visibility:visible"><a href="javascript:gotoLesson(4)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('L4','','images/mm5_2.jpg',1); showSummary(4)"><img src="images/mm5_0.jpg" alt="Lesson 4: Preventing Workplace Violence. Learner has not completed this lesson. Summary: This lesson provides actions to take if you see signs of potential violence in the workplace and identifies which behaviors to report." name="L4" width="47" height="52" border="0" ></a></div>
+
+<!--****************** End of Regular Layers ****************************-->
+
+<!--************* Completed Layers ********************-->
+<!-- Quick Tour -->
+<div id="completed0"  style="position:absolute; width:70px; height:94px; top: 418px; left: 95px; z-index:2; visibility:hidden;"><a href="javascript:gotoLesson(0)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('qtour2','','images/quicktour_complete_2.jpg',1); showSummary(0)"><img id="qtour2" name="qtour2" src="images/quicktour_complete.jpg" alt="Quick Tour. Learner has completed this lesson." width="70" height="94" border="0" ></a></div>
+
+<!-- Lesson 1 -->
+<div id="completed1"  style="position:absolute; width:71px; height:93px; top: 310px; left: 226px; z-index:3; visibility:hidden;"><a href="javascript:gotoLesson(1)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('L1c','','images/lesson1_complete_2.jpg',1); showSummary(1)"><img id="L1c" name="L1c" src="images/lesson1_complete.jpg" alt="Lesson 1: Course Overview. Learner has completed this lesson." width="70" height="94" border="0"></a></div>
+
+<!-- Lesson 2 -->
+<div id="completed2"  style="position:absolute; width:71px; height:93px; top: 284px; left: 393px; z-index:3; visibility:hidden;"><a href="javascript:gotoLesson(2)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('L2c','','images/lesson2_complete_2.jpg',1); showSummary(2)"><img id="L2c" name="L2c" src="images/lesson2_complete.jpg" alt="Lesson 2: What is Workplace Violence? Learner has completed this lesson." width="70" height="94" border="0"></a></div>
+
+<!-- Lesson 3 -->
+<div id="completed3" style="position:absolute; width:71px; height:20px; left:532px; top:188px; z-index:3; visibility:hidden;"><a href="javascript:gotoLesson(3)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('L3c','','images/lesson3_complete_2.jpg',1); showSummary(3)"><img id="L3c" name="L3c" src="images/lesson3_complete.jpg" alt="Lesson 3: Understanding the Paths to Workplace Violence. Learner has completed this lesson." width="70" height="94" border="0"></a></div>
+
+<!-- Lesson 4 -->
+<div id="completed4" style="position:absolute; width:71px; height:93px; left:688px; top:218px; z-index:3; visibility:hidden"><a href="javascript:gotoLesson(4)" onMouseOut="MM_swapImgRestore(); hideSummary()" onMouseOver="MM_swapImage('L4c','','images/lesson4_complete_2.jpg',1); showSummary(4)"><img id="L4c" name="L4c" src="images/lesson4_complete.jpg" alt="Lesson 4: Preventing Workplace Violence. Learner has completed this lesson." width="70" height="94" border="0"></a></div>
+
+<!--******************* End of Completed Layers **************************-->
+
+<!-- Flash Audio Object -->
+<!--	AC_FL_RunContent( 'name','swfFile','width','1','height','1','id','swfFile','src','audios/01020','loop','false','quality','high','play','false','swliveconnect','true','movie','audios/01020' ); //end AC code
+  </script>
+  <noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="swfFile" width="1" height="1" id="swfFile">
+    <param name="movie" value="audios/01020.swf">
+    <param name="quality" value="high"><param name="LOOP" value="false"><param name="PLAY" value="false">
+    <embed src="audios/01020.swf" width="18" height="18" loop="false" quality="high" type="application/x-shockwave-flash" name="swfFile" play="false" swliveconnect="true"></embed>
+    </object>
+  </noscript>
+</div>-->
+<!-- End of Flash Audio Object -->
+
+<div id="next" style="visibility:visible;">
+<a href="javascript:;" onMouseOver="MM_swapImage('btnNext','','images/next_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnNext" name="btnNext" src="images/next_0.jpg" border="0" alt="Goes to NEXT page" /></a></div>
+
+<div id="back" style="left:707px;">
+<a href="javascript:;" onMouseOver="MM_swapImage('btnBack','','images/back_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnBack" name="btnBack" src="images/back_0.jpg" border="0" alt="Goes to previous page" /></a></div>
+
+<!-- Audio Controls -->
+<div id="play" style="top:547px; left:11px"><a href="javascript:;" onMouseOver="MM_swapImage('btnPlay','','images/audio_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/audio_0.jpg" alt="Resume Play" name="btnPlay" width="38" height="44" border="0" id="btnPlay" /></a></div>
+
+<div id="pause1">
+<a href="javascript:;" onMouseOver="MM_swapImage('btnPause','','images/pause_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnPause" name="btnPause" src="images/pause_0.jpg" border="0" alt="Pause" /></a></div>
+
+<div id="replay">
+<a href="javascript:;" onMouseOver="MM_swapImage('btnReplay','','images/refresh_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnReplay" name="btnReplay" src="images/refresh_0.jpg" border="0" alt="Replay" /></a></div>
+
+<div id="cc">
+<a href="javascript:;" onMouseOver="MM_swapImage('btnCC','','images/cc_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnCC" name="btnCC" src="images/cc_0.jpg" border="0" alt="Opens Closed Captioning" /></a></div>
+<!-- End of Audio Controls -->
+
+<!-- Items on top bar -->
+<div id="help">
+<a href="javascript:openHelp('anyting')" onMouseOver="MM_swapImage('btnHelp','','images/help_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnHelp" name="btnHelp" src="images/help_0.jpg" border="0" alt="Opens a help file" /></a></div>
+
+<div id="glossary">
+<a href="javascript:openGlossary('anyting')" onMouseOver="MM_swapImage('btnGlos','','images/glossary_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnGlos" name="btnGlos" src="images/glossary_0.jpg" border="0" alt="Opens a glossary window" /></a></div>
+
+<div id="resources">
+<a href="javascript:openResources('anyting')" onMouseOver="MM_swapImage('btnRes','','images/resources_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnRes" name="btnRes" src="images/resources_0.jpg" border="0" alt="Opens a resources window" /></a></div>
+
+<div id="sitemap">
+<a href="javascript:openSitemap('anyting')" onMouseOver="MM_swapImage('btnSM','','images/siteMap_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnSM" name="btnSM" src="images/siteMap_0.jpg" border="0" alt="Opens site map" /></a></div>
+
+<div id="menu">
+<a href="javascript:;" onMouseOver="MM_swapImage('btnMenu','','images/mainMenu_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnMenu" name="btnMenu" src="images/mainMenu_0.jpg" width="83" height="15" border="0" alt="Goes to course menu" /></a></div>
+
+<div id="exit">
+<a href="javascript:exitCourse(true)" onMouseOver="MM_swapImage('btnExit','','images/exit_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnExit" name="btnExit" src="images/exit_0.jpg" width="83" height="15" border="0" alt="Exits the course" /></a></div>
+
+<div id="disclaimer">
+<img src="images/disclaimer.jpg" alt="Disclaimer: None of the photographs used throughout this course depict the actual individuals involved in the news stories or vignettes.  The photos are of actors and models and are intended solely to illustrate key points and concepts related to preventing workplace violence."></div>
+<!-- End of Items on top bar -->
+
+</div>
+<!--****************** End of Completed Layers ****************************-->
+
+</body>
+</html>

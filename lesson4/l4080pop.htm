@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/popFile.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Popup Information</title>
+<!-- InstanceEndEditable -->
+<link href="../tsa_style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="../tsa_script.js"></script>
+<style>
+	body {
+		background: none;
+		background-color:#ffffff;
+	}
+</style>
+
+<script language="javascript">
+function closePopup() {
+	if (gDef != 1) {
+		window.opener.aStop();
+	}
+	self.close();
+}
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+<!--
+
+var gDef = getQueryValue('popterm')
+var arrPopup = new Array();
+var numTern = 5;
+for (var i=0; i<numTern; i++) {
+	arrPopup[i] = "";
+}
+
+arrPopup[1]  = "<p class='popupH'>Audio Transcript</p> <p>In addition to reporting the kinds of behaviors that may indicate a potential for workplace violence, TSA employees also need to control their own behavior.  Self-control is essential so that interactions between employees and customers don’t spiral out of control and erupt in impromptu violence.</p><p>The potential for impromptu violence is great when a person doesn't get what he or she wants and becomes emotional.  These emotions can quickly turn to anger and frustration, and then to violence.</p><p>When dealing with someone who is becoming angry and increasingly frustrated, how you respond can either add fuel to the argument, causing it to spiral towards violence, or can prevent violence from erupting. </p><p>There is no one correct way to resolve a potentially violent incident.  How you respond very much depends on the aggressor's behavior and the overall situation.  Methods include:</p> <p><ul><li>Exercising restraint and being aware of your own feelings and emotions so that you don't escalate the situation<li>Communicating in a respectful manner</li><li>Being flexible and cooperative</li><li>Calling for assistance</li><li>Reporting the situation to the local WVP Coordinator or your Supervisor</li></ul></p> <p>Select each image to listen to some other possible methods for decreasing the likelihood of violence in the workplace.</p>";
+
+arrPopup[1] = arrPopup[1] + "<p>Pop-up Audio 1<br />Treat the angry individual with extreme courtesy and respect. Often, angry, emotional individuals believe they have been treated disrespectfully.  Restoring their sense of respect helps them bring their anger and emotions under control.</p>";
+
+arrPopup[1] = arrPopup[1] + "<p>Pop-up Audio 2<br />Remove yourself from the situation, if possible - and only when doing so does not affect transportation security. Sometimes, angry, emotional individuals focus their wrath on a specific target.  Removing that target helps defuse the situation.</p>";
+
+arrPopup[1] = arrPopup[1] + "<p>Pop-up Audio 3<br />Listen to what the angry individual is saying so that the individual feels as though he or she has at least been heard.  Frequently, angry, emotional individuals simply want someone to listen to them and take their problem seriously.  Showing you are listening attentively may help bring their anger and emotion back under control.</p>";
+
+arrPopup[1] = arrPopup[1] + "<p>Pop-up Audio 4<br />Offer alternatives to violence.  Often, pointing out to angry, emotional individuals who appear to be on the verge of violence, that violence is not a good solution and that they have alternatives, may help calm down the angry individual and manage them away from a violent act.</p>";
+
+arrPopup[2]  = "<p class='popupH'>Be respectful</p> <p>Treat the angry individual with extreme courtesy and respect. Often, angry, emotional individuals believe they have been treated disrespectfully.  Restoring their sense of respect helps them bring their anger and emotions under control.</p>";
+
+arrPopup[3]  = "<p class='popupH'>Remove yourself</p> <p>Remove yourself from the situation, if possible - and only when doing so does not affect transportation security. Sometimes, angry, emotional individuals focus their wrath on a specific target.  Removing that target helps defuse the situation.</p>";
+
+arrPopup[4]  = "<p class='popupH'>Listen</p> <p>Listen to what the angry individual is saying so that the individual feels as though he or she has at least been heard.  Frequently, angry, emotional individuals simply want someone to listen to them and take their problem seriously.  Showing you are listening attentively may help bring their anger and emotion back under control.</p>";
+
+arrPopup[5]  = "<p class='popupH'>Offer alternatives</p> <p>Offer alternatives to violence.  Often, pointing out to angry, emotional individuals who appear to be on the verge of violence, that violence is not a good solution and that they have alternatives, may help calm down the angry individual and manage them away from a violent act.</p>";
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="MM_preloadImages('../images/close_2.jpg')">
+<div id="noGraphicPopupText" style="position:relative; top:20px; left:-5px; width:550px; height:200px; text-align:left">
+  <p align="left" class="popupH">&nbsp;</p>
+  <script language="javascript" type="text/javascript" >
+		document.getElementById('noGraphicPopupText').innerHTML = arrPopup[gDef];
+    </script>
+  
+  <div id="btnClose" class="CloseButton">
+  	<p>&nbsp;</p>
+    <div align="center"><a href="javascript:closePopup();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('CButton','','../images/close_2.jpg',1)"><img src="../images/close_1.jpg" alt="Close Button" name="CButton" border="0" id="CButton" /></a></div>
+    <br />
+  </div>
+
+</div>
+
+<!-- InstanceBeginEditable name="ForScript" -->
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

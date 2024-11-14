@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><!-- InstanceBegin template="/Templates/splitScreen_audioAutoPlay.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>TSA-WVPP</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../tsa_style.css" title="tsaCSS" />
+<script language="javascript" type="text/javascript" src="../APIWrapper.js"></script>
+<script language="javascript" type="text/javascript" src="../SCOFunctions.js"></script>
+<script language="javascript" type="text/javascript" src="../tsaLMSfunctions.js"></script>
+<script language="javascript" type="text/javascript" src="../tsa_script.js"></script>
+<script language="javascript" type="text/javascript" src="../AC_RunActiveContent.js"></script>
+<script language="javascript">
+	initializePage();
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+<script language="JavaScript" type="text/javascript">
+<!--
+MM_preloadImages('../images/l4050_a_0.jpg', '../images/l4050_a_2.jpg', '../images/l4050_b_0.jpg', '../images/l4050_b_2.jpg');
+
+function startPage() {
+	startTimer();
+	if (inLMS == "yes") {
+		if ( isPageViewed(getPage()) ) {
+			//show prompt and next button
+			showNext();
+		}
+	}
+	document.getElementById("pause1").style.visibility = "visible";
+	document.getElementById("replay").style.visibility = "visible";
+	document.getElementById("cc").style.visibility = "visible";
+}
+
+function divRoll(d_on_off, d_id){ 
+     if (d_on_off == 1) { 
+          if (document.layers){ 
+               document.layers[d_id].visibility='show'; 
+          }else{ 
+               document.all[d_id].style.visibility='visible';           
+          } 
+     } 
+      
+     if(d_on_off == 0){ 
+          if (document.layers){ 
+               document.layers[d_id].visibility='hide'; 
+          }else{ 
+               (document.all[d_id].style.visibility='hidden');      
+          } 
+     }           
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="startPage();MM_preloadImages('../images/l4050_a_2.jpg','../images/l4050_b_2.jpg')" onUnload="if (closing) exitCourse(false)">
+<br />
+<div id="wrapper">
+
+<!-- InstanceBeginEditable name="Edit_PageSetup" -->
+
+<script language="JavaScript" type="text/javascript">
+<!--
+noInteraction = false;
+var autoRun = false;
+var nextPage = "l4060.htm";
+var prvPage = "l4040.htm";
+var menuPage = "../m01_mainmenu.htm";
+
+var currentAudio = "0";
+arrSteps = new Array(0,0);
+var aNum = "0";
+
+function playAudio(id) { //id = audio number
+	aNum = id;
+	arrSteps[id-1] = 1;
+	MM_controlShockwave(currentAudio,'','StopPlay');
+	MM_controlShockwave(currentAudio,'','Rewind');
+	MM_controlShockwave(id,'','Play');
+	currentAudio = id;
+
+/*	var nTotal = 0;
+	for (var i=0; i<5; i++) {
+		nTotal += arrSteps[i];
+	}
+	if (nTotal == 2) {
+		showNext();
+	}
+*/	//eval("document.getElementById('hLight" + aNum + "').style.visibility = 'visible'");
+}
+
+function aPlay() {
+	MM_controlShockwave(aNum,'','Play');	
+	document.getElementById("play1").style.visibility = "hidden";
+	document.getElementById("play2").style.visibility = "visible";
+	document.getElementById("pause2").style.visibility = "hidden";
+	document.getElementById("pause1").style.visibility = "visible";
+}
+
+function aPause() {
+	MM_controlShockwave(aNum,'','StopPlay');
+	document.getElementById("play2").style.visibility = "hidden";
+	document.getElementById("play1").style.visibility = "visible";
+	document.getElementById("pause1").style.visibility = "hidden";
+	document.getElementById("pause2").style.visibility = "visible";
+}
+
+function aStop() {
+	MM_controlShockwave(aNum,'','StopPlay');
+	MM_controlShockwave(aNum,'','Rewind');
+	document.getElementById("play2").style.visibility = "hidden";
+	document.getElementById("play1").style.visibility = "visible";
+}
+
+function aReplay() {
+	MM_controlShockwave(aNum,'','Rewind');
+	MM_controlShockwave(aNum,'','Play');
+	playAudio('0');		
+	document.getElementById("pause2").style.visibility = "hidden";
+	document.getElementById("pause1").style.visibility = "visible";
+}
+
+function checkPgCompletion() {
+	//close the popup window
+//	if (winPop && !winPop.closed) {
+//	 	winPop.close();
+//	}
+
+	var nTotal = 0;
+	for (var i=0; i<2; i++) {
+		nTotal += arrSteps[i];
+	}
+	if (nTotal == 2) {
+		//setTimeout("playAudio(id)", 1000);
+		//showNormal();
+		//showHighlight(1);
+		playAudio('3');
+	}
+}
+
+function showNormal() {
+	document.getElementById("gB1").style.visibility = "visible";
+	document.getElementById("gB2").style.visibility = "hidden";
+	document.getElementById("gA1").style.visibility = "visible";
+	document.getElementById("gA2").style.visibility = "hidden";
+}
+
+function showHighlight(iWhich) {
+	if (parseInt(iWhich) == 1) {
+		document.getElementById("gB1").style.visibility = "visible";
+		document.getElementById("gB2").style.visibility = "hidden";
+		document.getElementById("gA1").style.visibility = "hidden";
+		document.getElementById("gA2").style.visibility = "visible";
+	} else {
+		document.getElementById("gA1").style.visibility = "visible";
+		document.getElementById("gA2").style.visibility = "hidden";
+		document.getElementById("gB1").style.visibility = "hidden";
+		document.getElementById("gB2").style.visibility = "visible";
+	}
+}
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_ModuleTitle" -->
+<div id="modTitle">
+  <div align="left">Preventing Workplace Violence</div>
+</div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_PageNumber" -->
+<div id="pageNumber">Screen 5 of 17 </div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_PageTitle" -->
+<div id="pageTitle">
+  <div align="left">COMMUNICATION IN THE WORKPLACE</div>
+</div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_Prompt" -->
+<div id="prompt">Select the <strong>Next</strong> Button to continue.</div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_fullContentArea" -->
+<div style="position:absolute; top:119px; left:20px; width:761px; height:53px;">
+  <p align="left">Listen to each situation and think about which conversation  is an appropriate statement in the workplace.</p>
+</div>
+
+<!-- Flash Audio Object -->
+<div id="flashAudio" >
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="swfFile" width="1" height="1" id="swfFile">
+    <param name="movie" value="../audios/l4050a.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="true" />
+    <embed src="../audios/l4050a.swf" width="18" height="18" loop="False" wmode="transparent" quality="high" type="application/x-shockwave-flash" name="swfFile" play="true" swliveconnect="true"></embed>
+    </object>
+</div>
+
+<div id="popAudio2" style="position:absolute; top:100; left:-100px; width:2px; height:2px;">
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="audio2" width="1" height="1" id="audio2">
+    <param name="movie" value="../audios/l4050b.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="false" />
+    <embed src="../audios/l4050b.swf" width="18" height="18" loop="False" wmode="transparent" quality="high" type="application/x-shockwave-flash" name="audio2" play="false" swliveconnect="true"></embed>
+    </object>
+</div>
+
+<div id="popAudio3" style="position:absolute; top:100; left:-100px; width:2px; height:2px;">
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="audio3" width="1" height="1" id="audio3">
+    <param name="movie" value="../audios/l4050c.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="false" />
+    <embed src="../audios/l4050c.swf" width="18" height="18" loop="False" quality="high" wmode="transparent" type="application/x-shockwave-flash" name="audio3" play="false" swliveconnect="true"></embed>
+    </object>
+</div>
+
+<div id="popAudio4" style="position:absolute; top:100; left:-100px; width:2px; height:2px;">
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="audio4" width="1" height="1" id="audio4">
+    <param name="movie" value="../audios/l4050d.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="false" />
+    <embed src="../audios/l4050d.swf" width="1" height="1" loop="False" quality="high" wmode="transparent" type="application/x-shockwave-flash" name="audio4" play="false" swliveconnect="true"></embed>
+    </object>
+</div>
+
+<div id="gA1" style="position:absolute; top:170px; left:40px; width:311px; height:226px; visibility:visible;">
+<a href="javascript:playAudio('1'); showHighlight(1);" onmouseover="MM_swapImage('imgA1','','../images/l4050_a_2.jpg',1)" onMouseOut="MM_swapImgRestore()"> <img id="imgA1" name="imgA1" src="../images/l4050_a_0.jpg" width="341" height="284" border="0" alt="Two TSA employees talking." /></a>
+</div>
+
+<div id="gA2" style="position:absolute; top:170px; left:40px; width:311px; height:226px; visibility:hidden;">
+<a href="javascript:playAudio('1');"> <img id="imgA2" name="imgA2" src="../images/l4050_a_2.jpg" width="341" height="284" border="0" alt="Two TSA employees talking." /></a>
+</div>
+
+<div id="gB1" style="position:absolute; top:170px; left:434px; width:311px; height:226px;">
+<a href="javascript:playAudio('2');showHighlight(2)" onmouseover="MM_swapImage('imgB1','','../images/l4050_b_2.jpg',1)" onMouseOut="MM_swapImgRestore()"> <img id="imgB1" name="imgB1" src="../images/l4050_b_0.jpg" width="341" height="284" border="0" alt="Two TSA employees talking." /></a>
+</div>
+
+<div id="gB2" style="position:absolute; top:170px; left:434px; width:311px; height:226px; visibility:hidden;">
+<a href="javascript:playAudio('2');" > <img id="imgB2" name="imgB2" src="../images/l4050_b_2.jpg" width="341" height="284" border="0" alt="Two TSA employees talking." /></a>
+</div>
+
+<!-- End of Flash Audio Object -->
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_CC_button" -->
+<!-- InstanceEndEditable -->
+
+<!-- Audio Controls -->
+<div id="play1" style="visibility:hidden;">
+<a href="javascript:aPlay();" onMouseOver="MM_swapImage('btnPlay1','','../images/audio_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/audio_0.jpg" alt="Resume Play" name="btnPlay1" width="38" height="44" border="0" id="btnPlay1" /></a></div>
+
+<div id="play2" style="visibility:visible;">
+<a href="javascript:aPlay();" onMouseOver="MM_swapImage('btnPlay2','','../images/audio_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/audio_2.jpg" alt="Resume Play" name="btnPlay2" width="38" height="44" border="0" id="btnPlay2" /></a></div>
+
+<div id="pause1">
+<a href="javascript:aPause()" onMouseOver="MM_swapImage('btnPause1','','../images/pause_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnPause1" name="btnPause1" src="../images/pause_0.jpg" border="0" alt="Pause" /></a></div>
+
+<div id="pause2">
+<a href="javascript:aPause()" onMouseOver="MM_swapImage('btnPause2','','../images/pause_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnPause2" name="btnPause2" src="../images/pause_2.jpg" border="0" alt="Pause" /></a></div>
+
+<div id="replay">
+<a href="javascript:aReplay()" onMouseOver="MM_swapImage('btnReplay','','../images/refresh_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnReplay" name="btnReplay" src="../images/refresh_0.jpg" border="0" alt="Replay" /></a></div>
+
+<div id="cc">
+<a href="javascript:showPopup(1)" onMouseOver="MM_swapImage('btnCC','','../images/cc_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnCC" name="btnCC" src="../images/cc_0.jpg" border="0" alt="Opens Closed Captioning" /></a></div>
+<!-- End of Audio Controls -->
+
+<div id="next">
+<a href="javascript:goNext()" onMouseOver="MM_swapImage('btnNext','','../images/next_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnNext" name="btnNext" src="../images/next_0.jpg" border="0" alt="Goes to NEXT page" /></a></div>
+
+<!-- This layer is here for review purpose -->
+<div id="tempNext">
+<a href="javascript:goNext()">Next</a></div>
+<!-- End of tempNext -->
+
+<div id="back">
+<a href="javascript:goBack()" onMouseOver="MM_swapImage('btnBack','','../images/back_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnBack" name="btnBack" src="../images/back_0.jpg" border="0" alt="Goes to previous page" /></a></div>
+
+<!-- Items on top bar -->
+<div id="help">
+<a href="javascript:openHelp()" onMouseOver="MM_swapImage('btnHelp','','../images/help_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnHelp" name="btnHelp" src="../images/help_0.jpg" border="0" alt="Opens a help file" /></a></div>
+
+<div id="glossary">
+<a href="javascript:openGlossary()" onMouseOver="MM_swapImage('btnGlos','','../images/glossary_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnGlos" name="btnGlos" src="../images/glossary_0.jpg" border="0" alt="Opens a glossary window" /></a></div>
+
+<div id="resources">
+<a href="javascript:openResources()" onMouseOver="MM_swapImage('btnRes','','../images/resources_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnRes" name="btnRes" src="../images/resources_0.jpg" border="0" alt="Opens a resources window" /></a></div>
+
+<div id="sitemap">
+<a href="javascript:openSitemap()" onMouseOver="MM_swapImage('btnSM','','../images/siteMap_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnSM" name="btnSM" src="../images/siteMap_0.jpg" border="0" alt="Opens site map" /></a></div>
+
+<div id="menu">
+<a href="javascript:goMenu()" onMouseOver="MM_swapImage('btnMenu','','../images/mainMenu_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnMenu" name="btnMenu" src="../images/mainMenu_0.jpg" width="83" height="15" border="0" alt="Goes to course menu" /></a></div>
+
+<div id="exit">
+<a href="javascript:exitCourse(true)" onMouseOver="MM_swapImage('btnExit','','../images/exit_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnExit" name="btnExit" src="../images/exit_0.jpg" width="83" height="15" border="0" alt="Exits the course" /></a></div>
+<!-- End of Items on top bar -->
+</div>
+</body>
+<!-- InstanceEnd --></html>

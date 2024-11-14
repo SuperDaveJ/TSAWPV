@@ -1,0 +1,248 @@
+<?xml version = "1.0"?>
+<manifest identifier="TSA_WVPP_Manifest" version="1.0"
+       xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+       xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+       xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                           http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                           http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+	<metadata>
+    	<schema>ADL SCORM</schema>
+    	<schemaversion>1.2</schemaversion>
+    	<imsmd:lom>
+      		<imsmd:general>
+        		<imsmd:title>
+          			<imsmd:langstring xml:lang="en-US">TSA_WVPP</imsmd:langstring>
+        		</imsmd:title>
+      		</imsmd:general>
+    	</imsmd:lom>
+	</metadata>
+
+   <organizations default = "TSA_WVPP">
+      	<organization identifier = "TSA_WVPP">
+         	<title>TSA - Workplace Violence Prevention Program</title>
+         	<item identifier="TSA" identifierref="TSA_WVPP_SCO">
+            		<title>Workplace Violence Prevention Program</title>
+			</item>
+   		</organization>
+   </organizations>
+
+   <resources>
+      <resource identifier="TSA_WVPP_SCO" type="webcontent" adlcp:scormtype="sco" href="index.htm">
+         <metadata>
+            <schema>ADL SCORM</schema>
+            <schemaversion>1.2</schemaversion>
+            <adlcp:location>tsa_m01.xml</adlcp:location>
+         </metadata>
+         <file href="index.htm" />
+         <file href="m01_mainmenu.htm" />
+	 	 <dependency identifierref="supportFiles" />
+	 	 <dependency identifierref="images" />
+         <dependency identifierref="quickTourFiles"/>
+         <dependency identifierref="lesson1Files"/>
+         <dependency identifierref="lesson2Files"/>
+         <dependency identifierref="lesson3Files"/>
+         <dependency identifierref="lesson4Files"/>
+         <dependency identifierref="templates"/>
+      </resource>
+
+      <resource identifier="supportFiles" type="webcontent" adlcp:scormtype="asset">
+         <file href="tsa_style.css" />
+         <file href="APIWrapper.js" />
+         <file href="SCOFunctions.js" />
+		 <file href="tsa_script.js" />
+		 <file href="tsaLMSfunctions.js" />
+         <file href="AC_RunActiveContent.js" />
+		 <file href="tsa_glossary.htm" />
+		 <file href="tsa_help.htm" />
+         <file href="tsa_resources.htm" />
+         <file href="tsa_sitemap.htm" />
+      </resource>
+
+      <resource identifier="images" type="webcontent" adlcp:scormtype="asset">
+         <file href="images/main.jpg" />
+         <file href="images/mainMenu_0.jpg" />         
+		 <file href="images/mainMenu_2.jpg" />
+		 <file href="images/mm1_0.jpg" />
+		 <file href="images/mm1_2.jpg" />
+		 <file href="images/mm2_0.jpg" />
+		 <file href="images/mm2_2.jpg" />
+		 <file href="images/mm3_0.jpg" />
+		 <file href="images/mm3_2.jpg" />
+		 <file href="images/mm4_0.jpg" />
+		 <file href="images/mm4_2.jpg" />
+		 <file href="images/next_0.jpg" />
+		 <file href="images/next_1.jpg" />
+		 <file href="images/back_0.jpg" />
+		 <file href="images/back_1.jpg" />
+		 <file href="images/audio_0.jpg" />
+		 <file href="images/audio_1.jpg" />
+		 <file href="images/audio_2.jpg" />
+		 <file href="images/pause_0.jpg" />
+		 <file href="images/pause_1.jpg" />
+		 <file href="images/pause_2.jpg" />
+		 <file href="images/popAudio_0.jpg" />
+		 <file href="images/popAudio_1.jpg" />
+		 <file href="images/refresh_0.jpg" />
+		 <file href="images/refresh_1.jpg" />
+		 <file href="images/resources.jpg" />
+		 <file href="images/resources_0.jpg" />
+		 <file href="images/resources_2.jpg" />
+		 <file href="images/siteMap.jpg" />
+		 <file href="images/siteMap_0.jpg" />
+		 <file href="images/siteMap_2.jpg" />
+		 <file href="images/help.jpg" />
+		 <file href="images/help_0.jpg" />
+		 <file href="images/help_2.jpg" />
+		 <file href="images/glossary.jpg" />
+		 <file href="images/glossary_0.jpg" />
+		 <file href="images/glossary_2.jpg" />
+      </resource>
+
+      <resource identifier="quickTourFiles" type="webcontent" adlcp:scormtype="asset">
+         <file href="lesson0/l0010.htm" />
+         <file href="lesson0/l0010pop.htm" />
+         <file href="lesson0/l0020.htm" />
+         <file href="lesson0/l0020pop.htm" />
+         <file href="lesson0/l0030.htm" />
+         <file href="lesson0/l0030pop.htm" />
+         <file href="lesson0/l0040.htm" />
+         <file href="lesson0/l0040.swf" />
+         <file href="lesson0/l0040pop.htm" />
+         <file href="lesson0/l0050.htm" />
+         <file href="lesson0/l0050pop.htm" />
+      </resource>
+
+
+      <resource identifier="lesson1Files" type="webcontent" adlcp:scormtype="asset">
+         <file href="lesson1/l1010.htm" />
+         <file href="lesson1/l1010pop.htm" />
+         <file href="lesson1/l1010.swf" />
+         <file href="lesson1/l1020.htm" />
+         <file href="lesson1/l1020pop.htm" />
+         <file href="lesson1/l1030.htm" />
+         <file href="lesson1/l1030pop.htm" />
+         <file href="lesson1/l1040.htm" />
+         <file href="lesson1/l1040pop.htm" />
+         <file href="lesson1/l1050.htm" />
+         <file href="lesson1/l1050pop.htm" />
+         <file href="lesson1/l1060.htm" />
+         <file href="lesson1/l1060pop.htm" />
+      </resource>
+	  
+      <resource identifier="lesson2Files" type="webcontent" adlcp:scormtype="asset">
+         <file href="lesson2/l2010.htm" />
+         <file href="lesson2/l2010pop.htm" />
+         <file href="lesson2/l2010.swf" />
+         <file href="lesson2/l2020.htm" />
+         <file href="lesson2/l2020pop.htm" />
+         <file href="lesson2/l2030.htm" />
+         <file href="lesson2/l2030pop.htm" />
+         <file href="lesson2/l2040.htm" />
+         <file href="lesson2/l2040pop.htm" />
+         <file href="lesson2/l2050.htm" />
+         <file href="lesson2/l2050pop.htm" />
+         <file href="lesson2/l2060.htm" />
+         <file href="lesson2/l2060pop.htm" />
+         <file href="lesson2/l2070_1.htm" />
+         <file href="lesson2/l2070_1pop.htm" />
+         <file href="lesson2/l2070_2.htm" />
+         <file href="lesson2/l2070_2pop.htm" />
+         <file href="lesson2/l2080.htm" />
+         <file href="lesson2/l2080pop.htm" />
+      </resource>
+	  
+      <resource identifier="lesson3Files" type="webcontent" adlcp:scormtype="asset">
+         <file href="lesson3/l3010.htm" />
+         <file href="lesson3/l3010pop.htm" />
+         <file href="lesson3/l3010.swf" />
+         <file href="lesson3/l3020.htm" />
+         <file href="lesson3/l3020pop.htm" />
+         <file href="lesson3/l3030.htm" />
+         <file href="lesson3/l3030pop.htm" />
+         <file href="lesson3/l3040.htm" />
+         <file href="lesson3/l3040pop.htm" />
+         <file href="lesson3/l3050.htm" />
+         <file href="lesson3/l3050pop.htm" />
+         <file href="lesson3/l3070.htm" />
+         <file href="lesson3/l3070pop.htm" />
+         <file href="lesson3/l3080b.htm" />
+         <file href="lesson3/l3080c.htm" />
+         <file href="lesson3/l3080d.htm" />
+         <file href="lesson3/l3080e.htm" />
+         <file href="lesson3/l3080f.htm" />
+         <file href="lesson3/l3090.htm" />
+         <file href="lesson3/l3090pop.htm" />
+         <file href="lesson3/l3100.htm" />
+         <file href="lesson3/l3100pop.htm" />
+         <file href="lesson3/l3110_1.htm" />
+         <file href="lesson3/l3110_1pop.htm" />
+         <file href="lesson3/l3110_2.htm" />
+         <file href="lesson3/l3110_2pop.htm" />
+         <file href="lesson3/l3110.swf" />
+         <file href="lesson3/l3120_1.htm" />
+         <file href="lesson3/l3120_1pop.htm" />
+         <file href="lesson3/l3120_2.htm" />
+         <file href="lesson3/l3120_2pop.htm" />
+         <file href="lesson3/l3120.swf" />
+         <file href="lesson3/l3130.htm" />
+         <file href="lesson3/l3130pop.htm" />
+      </resource>
+	  
+      <resource identifier="lesson4Files" type="webcontent" adlcp:scormtype="asset">
+         <file href="lesson4/l4010.htm" />
+         <file href="lesson4/l4010pop.htm" />
+         <file href="lesson4/l4010.swf" />
+         <file href="lesson4/l4020.htm" />
+         <file href="lesson4/l4020pop.htm" />
+         <file href="lesson4/l4030.htm" />
+         <file href="lesson4/l4030pop.htm" />
+         <file href="lesson4/l4040.htm" />
+         <file href="lesson4/l4040pop.htm" />
+         <file href="lesson4/l4050.htm" />
+         <file href="lesson4/l4050pop.htm" />
+         <file href="lesson4/l4060.htm" />
+         <file href="lesson4/l4060pop.htm" />
+         <file href="lesson4/l4070.htm" />
+         <file href="lesson4/l4070pop.htm" />
+         <file href="lesson4/l4080.htm" />
+         <file href="lesson4/l4080pop.htm" />
+         <file href="lesson4/l4080_slides.swf" />
+         <file href="lesson4/l4090.htm" />
+         <file href="lesson4/l4090pop.htm" />
+         <file href="lesson4/l4100.htm" />
+         <file href="lesson4/l4100pop.htm" />
+         <file href="lesson4/l4170.htm" />
+         <file href="lesson4/l4170pop.htm" />
+         <file href="lesson4/l4110.htm" />
+         <file href="lesson4/l4110pop.htm" />
+         <file href="lesson4/l4120.htm" />
+         <file href="lesson4/l4120pop.htm" />
+         <file href="lesson4/l4130.htm" />
+         <file href="lesson4/l4130pop.htm" />
+         <file href="lesson4/l4140.htm" />
+         <file href="lesson4/l4140pop.htm" />
+         <file href="lesson4/l4150.htm" />
+         <file href="lesson4/l4150pop.htm" />
+         <file href="lesson4/l4160.htm" />
+         <file href="lesson4/l4160pop.htm" />
+         <file href="lesson4/l4170.htm" />
+         <file href="lesson4/l4170pop.htm" />
+      </resource>
+	  	  
+      <resource identifier="templates" type="webcontent" adlcp:scormtype="asset">
+         <file href="templates/base_layout.dwt" />
+         <file href="templates/base_layout_audioAutoPlay.dwt" />
+         <file href="templates/mainmenu.dwt" />
+         <file href="templates/popFile.dwt" />
+         <file href="templates/popFileWithAudio.dwt" />
+         <file href="templates/splitScreen_audioAutoPlay.dwt" />
+         <file href="templates/splitScreen_oneIcon_audioAutoPlay.dwt" />
+         <file href="templates/splitScreen_twoIcons_audioAutoPlay.dwt" />
+      </resource>
+	  
+   </resources>
+
+</manifest>

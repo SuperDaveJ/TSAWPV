@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/popFile.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Popup Information</title>
+<!-- InstanceEndEditable -->
+<link href="../tsa_style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="../tsa_script.js"></script>
+<style>
+	body {
+		background: none;
+		background-color:#ffffff;
+	}
+</style>
+
+<script language="javascript">
+function closePopup() {
+	if (gDef != 1) {
+		window.opener.aStop();
+	}
+	self.close();
+}
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+<!--
+
+var gDef = getQueryValue('popterm')
+var arrPopup = new Array();
+var numTern = 2;
+for (var i=0; i<numTern; i++) {
+	arrPopup[i] = "";
+}
+
+arrPopup[1]  = "<p class='popupH'>Audio Transcript</p> <p>This section provides you with an overview of the course navigation and features that will be available in this program.</p> <p>Breadcrumb Area:<br />Identifies the lesson you are currently in. This enables you to trace your path back through the current topic and lesson. Select either of these to go to the first screen in that lesson or topic.</p>  <p>Site Map:<br />Visually depicts each lesson and the topics within the lesson.  Selecting a topic title takes you to the first screen of that part of the course. Be aware the links will not become active until you have completed the lesson.</p> <p>Resources:<br />Identifies additional information, such as TSA’s Employee Assistance Program (EAP), Conflict Management Training, and the TSA Management Directives that apply to this program.</p> <p>Glossary:<br />Provides definitions of words used in this program.</p> <p>Help:<br />Provides you with specific assistance regarding the program features.</p> <p>Exit:<br />Enables you to leave the course and to close the browser window.</p> <p>Content Area:<br />The main part of the screen which displays text and graphics for viewing and interaction. It may contain links to pop-up information boxes.</p> <p>Audio:<br />Enables you to determine if the audio portion of this course is playing or if it is complete.</p> <p>Pause:<br />Enables you to temporarily stop this course. To Resume, Press the Audio Speaker Button.</p>  <p>Replay:<br />Enables you to play the audio portion again.</p> <p>Closed Caption:<br />Provides written text of the narration.</p> <p>Prompt Area:<br />The prompt tells you what you need to do to progress to the next screen. On screens with selectable items, the prompt changes as you interact with the screen, telling you what to do next.</p> <p>Screen Numbers:<br />Identifies the screen number you are currently on and the total number of screens to complete the lesson.</p> <p>Back:<br />Enables you to return to the previous screen in the lesson.</p> <p>Next:<br />Enables you to advance to the next screen in the lesson.</p> <p>Links:<br />Allow to you access additional information such as text, photos or graphics. The prompt will alert you to which items on the screen are linked. Not all links are optional. Therefore, it is recommended that you select all links and review the information provided. </p> <p>D-Links:<br />Specific type of link for those in need of special accommodations to access the course.  D-Links are used when Section 508 compliance cannot be accomplished in any other way. The D-Link will be provided as an alternative, text-only presentation which provides equivalent functionality. The &quot;D-link&quot; is an evolving standard to satisfy this requirement; it involves placing a &quot;D&quot; after a non-text element which links to a separate text-only page with a detailed description of the content.</p> <p>Main Menu:<br />Enables you to return to the main menu and navigate to any lesson that is completed.</p>";
+
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="MM_preloadImages('../images/close_2.jpg')">
+<div id="noGraphicPopupText" style="position:relative; top:20px; left:-5px; width:550px; height:200px; text-align:left">
+  <p align="left" class="popupH">&nbsp;</p>
+  <script language="javascript" type="text/javascript" >
+		document.getElementById('noGraphicPopupText').innerHTML = arrPopup[gDef];
+    </script>
+  
+  <div id="btnClose" class="CloseButton">
+  	<p>&nbsp;</p>
+    <div align="center"><a href="javascript:closePopup();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('CButton','','../images/close_2.jpg',1)"><img src="../images/close_1.jpg" alt="Close Button" name="CButton" border="0" id="CButton" /></a></div>
+    <br />
+  </div>
+
+</div>
+
+<!-- InstanceBeginEditable name="ForScript" -->
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

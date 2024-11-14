@@ -1,0 +1,419 @@
+/* TSA css */
+
+#wrapper {width: 800px; height:600px; margin: 0 auto; position: relative; background-image:url(images/contentbkgnd.jpg)}
+#wrapper_menu {width: 800px; height:600px; margin: 0 auto; position: relative; background-image:url(images/main.jpg)}
+
+body {
+    background-color:#1c3243;
+	text-align:center;
+	margin: 0px;
+	color: #000000;
+	letter-spacing: 0px;
+	line-height: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+
+#modTitle { 
+	position: absolute;
+	left: 62px;
+	top: 49px;
+	width: 229px;
+	height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal; 
+	text-align:left; 
+	color:#a2c6c8;
+}
+
+#pageTitle {
+	position: absolute;
+	left: 20px;
+	top: 85px;
+	width: 761px;
+	height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;  
+	color:#c37325;
+	line-height: normal;
+	text-align:left;
+}
+
+#fullContentArea {
+	position: absolute;
+	left: 20px;
+	top: 121px;
+	width: 760px;
+	height: 380px;
+}
+
+#topHalf {
+	position: absolute;
+	left: 31px;
+	top: 162px;
+	width: 915px;
+	height: 205px;
+}
+
+#bottomHalf {
+	position: absolute;
+	left: 31px;
+	top: 375px;
+	width: 915px;
+	height: 210px;
+}
+
+#leftText {
+	position: absolute;
+	left: 20px;
+	top: 118px;
+	width: 370px;
+	height: 380px;
+}
+
+#rightImage {
+	position: absolute;
+	left: 485px;
+	top: 119px;
+	width: 255px;
+	height: 380px;
+	text-align:right;
+}
+
+#iconRight {
+	position: absolute;
+	left: 616px;
+	top: 80px;
+	width: 165px;
+	height: 70px;
+	z-index: 10;
+}
+
+#iconLeft {
+	position: absolute;
+	left: 445px;
+	top: 80px;
+	width: 165px;
+	height: 70px;
+	z-index: 10;
+}
+
+#menu{
+	position:absolute; 
+	top:48px; 
+	left:294px;
+	width: 83px;
+	height: 15px; 
+	z-index:2;
+}
+
+#sitemap{
+	position:absolute; 
+	top:48px; 
+	left:378px;
+	width: 83px;
+	height: 15px; 
+	z-index:2;
+}
+
+#resources{
+	position:absolute; 
+	top:48px; 
+	left:462px;
+	width: 83px;
+	height: 15px; 
+	z-index:2;
+}
+
+#glossary{
+	position:absolute; 
+	top:48px; 
+	left:546px;
+	width: 83px;
+	height: 15px; 
+	z-index:2;
+}
+
+#help {
+	position:absolute;
+	left:630px;
+	top:48px; 
+	width:83px; 
+	height:15px; 
+	z-index:2;
+}
+
+#exit {
+	position:absolute;
+	left:714px;
+	top:48px; 
+	width:83px; 
+	height:15px; 
+	z-index:2;
+}
+
+#play1 {
+	position:absolute;
+	left:11px;
+	top:547px; 
+	width:31px; 
+	height:1px; 
+	z-index:1;
+	visibility:hidden;
+}
+
+#play2 {
+	position:absolute;
+	left:11px;
+	top:547px; 
+	width:31px; 
+	height:1px; 
+	z-index:1;
+	visibility:visible;
+}
+
+#pause1 {
+	position:absolute;
+	left:58px;
+	top:547px; 
+	width:31px; 
+	height:1px; 
+	z-index:1;
+	visibility:hidden;
+}
+
+#pause2 {
+	position:absolute;
+	left:58px;
+	top:547px; 
+	width:31px; 
+	height:1px; 
+	z-index:1;
+	visibility:hidden;
+}
+
+#replay {
+	position:absolute;
+	left:103px;
+	top:547px; 
+	width:31px; 
+	height:1px; 
+	z-index:1;
+	visibility:hidden;
+}
+
+#cc {
+	position:absolute;
+	left:150px;
+	top:547px; 
+	width:31px; 
+	height:1px; 
+	z-index:1;
+	visibility:hidden;
+}
+
+#prompt {
+	position:absolute;
+	left:201px;
+	top:564px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: normal;
+	color:#000000;
+	width:421px;
+	height:20px;
+	z-index:10;
+	visibility:hidden;
+}
+
+#pageNumber {
+	position:absolute;
+	left:625px;
+	top:563px;
+	color:#a2c6c8;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: center;
+	width:81px;
+	height:20;
+	z-index:10;
+}
+
+#back {
+	position:absolute;
+	left:704px;
+	top:548px; 
+	width:25px; 
+	height:26px; 
+	z-index:1;
+}
+
+#next {
+	position:absolute;
+	left:749px;
+	top:548px;
+	width:18px;
+	height:18px;
+	z-index:1;
+	visibility:hidden;
+}
+
+#tempNext {
+	position:absolute;
+	left:760px;
+	top:521px;
+	width:18px;
+	height:18px;
+	z-index:21;
+	visibility:hidden;
+}
+
+#nextPointer {
+	position:absolute; 
+	top:474px; 
+	left:735px; 
+	width:65px; 
+	height:65px; 
+	z-index:20;
+	visibility:hidden;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 12px;
+	font-size: 12px;
+	line-height:normal;
+}
+
+ul {
+	margin-left: 16px;
+	margin-top: 5px;
+	padding: 0px;
+	/*list-style-type: disc;	*/
+	/*list-style-image: url(images/bullet.jpg); */
+	list-style-image: url(images/bullet.gif);
+}
+
+ul.gb {
+	margin-left: 35px;
+	margin-top: 0px;
+	padding: 0px;
+	list-style-image: url(sysimages/bullet.jpg);
+}
+
+ol {
+	margin-left: 35px;
+	margin-top: -6px;
+	padding: 0px;
+}
+
+li {
+	padding-top: 0px; 
+	margin-bottom: 2pt;
+}
+
+a:link {
+	color:#3399cc;
+	font-weight: bold;
+	text-decoration: none;
+	}
+a:visited {
+	color:#4c5257;
+	font-weight: bold;
+	text-decoration: none;
+	}
+a:hover {
+	text-decoration: underline;
+	color:#3399cc;
+	}
+a:active {
+	text-decoration: none;
+	color: #c37325;
+	}
+a.bullet:active {
+	text-decoration: none;
+	color: #00CC00;
+	}
+
+a.dlink {
+	color:#3399cc;
+	font-weight: bold;
+	text-decoration: underline;
+	}
+a.dlink:visited {
+	color:#884e20;
+	font-weight: bold;
+	text-decoration: underline;
+	}
+
+a.glossary {
+	color:#1105FC;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.glossary:visited {
+	color:#1105FC;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.glossary:hover {
+	color:#1105FC;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+/* font class*/
+.fbText {
+	font-size: 12pt;
+	color:#000000;
+	margin: 10px;
+	text-align: center;
+}
+.distrText {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin: 1px;
+	font-size: 12px;
+}
+
+#dlink {
+	position:absolute; 
+	left: 800px; 
+	top: 380px; 
+	width:20px; 
+	height:20px; 
+	z-index:20;
+	visibility: visible;
+}
+
+/* following is for popup windows */
+.popupH {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;  
+	/*margin: 10px 10px 10px 10px;*/
+	color:#c37325;
+	line-height: normal;
+}
+
+p.popup {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin: 0px 5px 5px 5px;
+	font-size: 12px;
+	line-height: 1.1;
+}
+
+#flashAudio {
+	position:absolute; 
+	left: -20px; 
+	top: 100px; 
+	width:10px; 
+	height:10px; 
+}

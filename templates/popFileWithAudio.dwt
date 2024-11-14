@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Popup Information</title>
+<!-- TemplateEndEditable -->
+<link href="../tsa_style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="../tsa_script.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../scripts/AC_RunActiveContent.js"></script>
+<style>
+	body {
+		background: none;
+		background-color:#ffffff;
+	}
+</style>
+
+<script language="javascript">
+function closePopup() {
+	//if (gDef != 1) {
+		window.opener.aStop();
+	//}
+	MM_controlShockwave(currentAudio,'','StopPlay');
+	self.close();
+}
+</script>
+
+<!-- TemplateBeginEditable name="head" -->
+
+<script type="text/JavaScript">
+<!--
+var currentAudio = "0";
+var aNum = "0";	
+
+function playAudio(id) { //aNum = audio number
+	aNum = id;
+	MM_controlShockwave(currentAudio,'','StopPlay');
+	MM_controlShockwave(aNum,'','Play');
+	currentAudio = aNum;
+}
+
+//-->
+</script>
+<!-- TemplateEndEditable -->
+</head>
+
+<body onload="MM_preloadImages('../images/close_2.jpg')">
+<!-- TemplateBeginEditable name="popContent" -->
+<div id="noGraphicPopupText" style="position:relative; top:30px; left:=20px; width:500px; height:200px; left: 20px; text-align:left">
+  <p align="left" class="popupH">Grievance (Intended)</p>
+
+<table align="left" width="550" border="0" cellpadding="3">
+  <tr>
+    <td colspan="2">Grievances may be communicated by:</td>
+  </tr>
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Expressing a sense of injustice <a href="javascript:playPopAudio(0);" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('audio1','','../images/audio_on',1)"><img name="audio1" align="absmiddle" src="../images/audio_off.jpg" alt="Audio button" border="0"/></a></td>
+  </tr>
+
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Taking on a sense of mission</td>
+  </tr>
+
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Showing suffering over some loss</td>
+  </tr>
+
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Describing a sense of destiny involving violence or a violent outcome <a href="javascript:playPopAudio(1);" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('audio2','','../images/audio_on',1)"><img name="audio2" align="absmiddle" src="../images/audio_off.jpg" alt="Audio button" border="0"/></a></td>
+  </tr>
+
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Communicating a desire for revenge</td>
+  </tr>
+
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Seeking recognition or fame through the act of violence <a href="javascript:playPopAudio(2);" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('audio3','','../images/audio_on',1)"><img name="audio3" align="absmiddle" src="../images/audio_off.jpg" alt="Audio button" border="0"/></a></td>
+  </tr>
+</table>
+<br />
+</div>
+  <div class="CloseButton" style="position:relative; left:0px; top:20px; width:550px; height:20px; text-align:center;">
+  	<p>&nbsp;</p>
+    <div align="center"><a href="javascript:closePopup();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('CButton','','../images/close_2.jpg',1)"><img src="../images/close_1.jpg" alt="Close Button" name="CButton" border="0" id="CButton" /></a></div>
+  <br />
+  </div>
+
+
+<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','1','height','1','src','../audios/l3080h','id','audio1','quality','high','play','false','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','../audios/l3080h' ); //end AC code
+</script>
+<noscript>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" id="audio1" width="1" height="1">
+    <param name="movie" value="../audios/l3080h.swf" />
+    <param name="quality" value="high" />
+	<param name="PLAY" value="false" />
+    <embed src="../audios/l3080h.swf" name="audio1" quality="high" play="false" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="1" height="1"></embed>
+</object>
+</noscript>
+
+<!-- TemplateEndEditable -->
+</body>
+</html>

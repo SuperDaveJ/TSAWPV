@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/popFile.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Popup Information</title>
+<!-- InstanceEndEditable -->
+<link href="../tsa_style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="../tsa_script.js"></script>
+<style>
+	body {
+		background: none;
+		background-color:#ffffff;
+	}
+</style>
+
+<script language="javascript">
+function closePopup() {
+	if (gDef != 1) {
+		window.opener.aStop();
+	}
+	self.close();
+}
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+<!--
+
+var gDef = getQueryValue('popterm')
+var arrPopup = new Array();
+var numTern = 1;
+for (var i=0; i<numTern; i++) {
+	arrPopup[i] = "";
+}
+
+arrPopup[1]  = "<p class='popupH'>Audio Transcript</p> <p>TSA understands that significant personal problems can disrupt life at home and productivity at work. As a result, TSA offers a variety of worklife program and model workplace services to help employees.</p><p>Select the blue highlighted text below to learn more about each program.</p>";
+
+arrPopup[2]  = "<p class='popupH'></p> <p>The user will be directed to the various links which are found under the Resources link.</p>";
+
+arrPopup[3]  = "<p class='popupH'>Employee Assistance Program (EAP) and services</p> <p>Open the Employee Assistance Program (EAP) and Services page under the Resources link.</p>";
+
+arrPopup[4]  = "<p class='popupH'>LifeCare Program and Services</p> <p>Open the LifeCare Program and Services page under the Resources link.</p>";
+
+arrPopup[5]  = "<p class='popupH'>How to Request EAP and LifeCare Seminars and Promotional Materials</p> <p>Open the How to Request EAP and LifeCare Seminars and Promotional Materials page under the Resources link.</p>";
+
+arrPopup[6]  = "<p class='popupH'>Conflict Management courses on the TSA Online Learning Center (OLC)</p> <p>Open the Conflict Management courses on the TSA Online Learning Center (OLC) page under the Resources link.</p>";
+
+arrPopup[7]  = "<p class='popupH'>Local Integrated Conflict Management System (ICMS)</p> <p>Open the Local Integrated Conflict Management System (ICMS) page under the Resources link.</p>";
+
+
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="MM_preloadImages('../images/close_2.jpg')">
+<div id="noGraphicPopupText" style="position:relative; top:20px; left:-5px; width:550px; height:200px; text-align:left">
+  <p align="left" class="popupH">&nbsp;</p>
+  <script language="javascript" type="text/javascript" >
+		document.getElementById('noGraphicPopupText').innerHTML = arrPopup[gDef];
+    </script>
+  
+  <div id="btnClose" class="CloseButton">
+  	<p>&nbsp;</p>
+    <div align="center"><a href="javascript:closePopup();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('CButton','','../images/close_2.jpg',1)"><img src="../images/close_1.jpg" alt="Close Button" name="CButton" border="0" id="CButton" /></a></div>
+    <br />
+  </div>
+
+</div>
+
+<!-- InstanceBeginEditable name="ForScript" -->
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

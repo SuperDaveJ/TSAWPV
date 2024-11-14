@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/popFileWithAudio.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Popup Information</title>
+<!-- InstanceEndEditable -->
+<link href="../tsa_style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="../tsa_script.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../scripts/AC_RunActiveContent.js"></script>
+<style>
+	body {
+		background: none;
+		background-color:#ffffff;
+	}
+</style>
+
+<script language="javascript">
+function closePopup() {
+	//if (gDef != 1) {
+		window.opener.aStop();
+	//}
+	MM_controlShockwave(currentAudio,'','StopPlay');
+	self.close();
+}
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+<!--
+var currentAudio = "0";
+
+function playPopAudio(id) { //id = audio number
+	if (currentAudio != id) MM_controlShockwave(currentAudio, '', 'StopPlay');
+	MM_controlShockwave(id, '', 'Rewind');
+	MM_controlShockwave(id, '', 'Play');
+	currentAudio = id;
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="MM_preloadImages('../images/close_2.jpg','../images/audio_on.jpg')">
+<!-- InstanceBeginEditable name="popContent" -->
+
+<div id="flashAudio" >
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="swfFile" width="1" height="1" id="swfFile">
+    <param name="movie" value="../audios/l3080f.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="true" />
+    <embed src="../audios/l3080f.swf" width="18" height="18" loop="False" quality="high" type="application/x-shockwave-flash" name="swfFile" play="true" swliveconnect="true"></embed>
+  </object>
+</div>
+
+<div id="popAudio1" style="position:absolute; top:80; left:-100px; width:2px; height:2px;">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" id="audio1" width="1" height="1">
+    <param name="movie" value="../audios/l3080z.swf" />
+    <param name="quality" value="high" />
+	<param name="PLAY" value="false" />
+	<param name="LOOP" value="false" />
+    <embed src="../audios/l3080z.swf" name="audio1" quality="high" play="false" loop="false" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="1" height="1"></embed>
+</object>
+</div>
+
+<div id="popAudio2" style="position:absolute; top:100; left:-100px; width:2px; height:2px;">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" id="audio2" width="1" height="1">
+    <param name="movie" value="../audios/l3080aa.swf" />
+    <param name="quality" value="high" />
+	<param name="PLAY" value="false" />
+	<param name="LOOP" value="false" />
+    <embed src="../audios/l3080aa.swf" name="audio2" quality="high" play="false" loop="false" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="1" height="1"></embed>
+</object>
+</div>
+
+<div id="popAudio3" style="position:absolute; top:120; left:-100px; width:2px; height:2px;">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" id="audio3" width="1" height="1">
+    <param name="movie" value="../audios/l3080bb.swf" />
+    <param name="quality" value="high" />
+	<param name="PLAY" value="false" />
+	<param name="LOOP" value="false" />
+    <embed src="../audios/l3080bb.swf" name="audio3" quality="high" play="false" loop="false" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="1" height="1"></embed>
+</object>
+</div>
+
+<div id="noGraphicPopupText" style="position:absolute; top:30px; left:20px; width:350px; height:200px; text-align:left;">
+  <p align="left" class="popupH"><strong>Breach</strong> (Intended)</p>
+
+<table align="left" width="350" border="0" cellpadding="3">
+  <tr>
+    <td colspan="2">Breach behavior may include:</td>
+  </tr>
+
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Overcoming any barrier or physical security <a href="javascript:playPopAudio('1');" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('audioBtn1','','../images/audio_on.jpg',1)"><img src="../images/audio_off.jpg" alt="Additional audio 19." id="audioBtn1" name="audioBtn1" border="0" align="absmiddle" /></a></td>
+  </tr>
+
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Sneaking up on the target  <a href="javascript:playPopAudio('2');" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('audioBtn21','','../images/audio_on.jpg',1)"><img src="../images/audio_off.jpg" alt="Additional audio 20." name="audioBtn21" border="0" align="absmiddle" id="audioBtn21" /></a></td>
+  </tr>
+
+  <tr>
+    <td width="10"><img src="../images/bullet.jpg" border="0" alt="bullet" /></td>
+    <td>Approaching the target with a weapon  <a href="javascript:playPopAudio('3');" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('audioBtn2','','../images/audio_on.jpg',1)"><img src="../images/audio_off.jpg" alt="Additional audio 21." name="audioBtn2" border="0" align="absmiddle" id="audioBtn2" /></a></td>
+  </tr>
+</table>
+</div>
+
+  <div class="CloseButton" style="position:absolute; left:19px; top:237px; width:354px; height:20px; text-align:center;">
+    <div align="center"><a href="javascript:self.close();" onclick="javascript:self.close();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('CButton','','../images/close_2.jpg',1)"><img src="../images/close_1.jpg" alt="Close Button" name="CButton" border="0" id="CButton" /></a></div>
+    <br />
+    <p>NOTE: Select the audio icon <img src="../images/audio_off.jpg" border="0" align="absmiddle" alt="audio icon" /> to hear real life examples.</p>
+    <br />
+  </div>
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

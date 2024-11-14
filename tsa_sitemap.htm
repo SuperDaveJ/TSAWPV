@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>TSA - Site Map</title>
+<link rel="stylesheet" href="tsa_style.css"  />
+<script language="javascript" type="text/javascript" src="APIWrapper.js"></script>
+<script language="javascript" type="text/javascript" src="SCOFunctions.js"></script>
+<script language="javascript" type="text/javascript" src="AC_RunActiveContent.js"></script>
+<!--<script language="javascript" type="text/javascript" src="tsaLMSfunctions.js"></script>-->
+<script language="javascript" type="text/javascript" src="tsa_script.js"></script>
+<style>
+	td {
+		font-family: Tw Cen MT condensed, Verdana, Arial, Helvetica;
+		font-size: 18px;
+		text-align:left;
+	}
+</style>
+
+</head>
+
+<body style="background:url(images/siteMap.jpg) top left no-repeat; margin:0px;">
+
+<script language="javascript">
+//alert("from opener: " + window.opener.nextPage);	//this works
+
+function gotoPage(pgURL) {
+	if (window.opener.inLMS == "yes") {
+		var intTemp, strTemp;
+		var arrTemp = new Array();
+		arrTemp = pgURL.split("/");
+		strTemp = arrTemp[1];
+		intTemp = strTemp.indexOf(".htm");
+		strTemp = strTemp.substring(0,intTemp);
+		intTemp = strTemp.substr(1,1);	//lesson number
+		
+		if ( (intTemp < 1) || window.opener.isPageViewed(strTemp) ) {
+			window.opener.closing = false;
+			window.opener.location.href = pgURL + "?inLMS=" + window.opener.inLMS;
+			//self.location.reload();
+		} else {
+			alert("You cannot go to a page that you have not completed.");
+		}
+	} else {
+		window.opener.closing = false;
+		window.opener.location.href = pgURL + "?inLMS=no";
+		//self.location.reload();
+	}
+}
+</script>
+
+<div id="holder" style="position:absolute; left:10px; top:70px; width:580px; height:400px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+    <td width="6%">&nbsp;</td>
+    <td colspan="2"><b>Quick Tour</b></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td width="6%">&nbsp;</td>
+    <td width="88%"><a href="javascript:gotoPage('lesson0/l0010.htm');">Lesson Overview</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson0/l0030.htm');">Lesson Objectives</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson0/l0040.htm');">Course Navigation and Features</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson0/l0050.htm');">Let's Get Started</a></td>
+  </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><b>Lesson 1: Course Overview</b></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson1/l1010.htm');">Violence Can Erupt Anywhere, Anytime</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson1/l1030.htm');">Initiation of TSA's Workplace Violence Prevention Program</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson1/l1040.htm');">Course Overview</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson1/l1050.htm');">Course Objectives</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson1/l1060.htm');">Lesson Summary</a></td>
+  </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><b>Lesson 2: What is Workplace Violence?</b></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson2/l2010.htm');">Lesson Overview</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson2/l2030.htm');">Lesson Objectives</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson2/l2040.htm');">Spectrum of Behaviors Associated with Workplace Violence</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson2/l2050.htm');">Types of Aggressors</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson2/l2060.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson2/l2070_1.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson2/l2070_2.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson2/l2080.htm');">Lesson Summary</a></td>
+  </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><b>Lesson 3: Understanding the Paths To Workplace Violence</b></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3010.htm');">Lesson Overview</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3030.htm');">Lesson Objectives</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3040.htm');">Be Aware!</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3050.htm');">Forms of Violence</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3060.htm');">Path to Impromptu Violence</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3070.htm');">Path to Intended Violence</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3090.htm');">Examples of the Paths to Violence: Impromptu</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3100.htm');">Examples of the Paths to Violence: Intended</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3110_1.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3110_2.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3120_1.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3120_2.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson3/l3130.htm');">Lesson Summary</a></td>
+  </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><b>Lesson 4: Preventing Workplace Violence</b></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4010.htm');">Lesson Overview</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4030.htm');">Lesson Objectives</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4040.htm');">Overview Of TSA's Workplace Violence Prevention Program</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4050.htm');">Communication In The Workplace</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4060.htm');">Reporting Requirements</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4070.htm');">Reporting an Incident</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4080.htm');">Defusing Impromptu Violence</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4090.htm');">Protecting Yourself From Intended Violence</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4100.htm');">Employee Services</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4110.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4120.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4130.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4140.htm');">Knowledge Check</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4150.htm');">Lesson Summary</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2"><b>Course Conclusion</b></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4160.htm');">Course Summary</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="javascript:gotoPage('lesson4/l4170.htm');">Course Feedback</a></td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3" style="text-align:center;"><a href="javascript:self.close();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('CButton','','images/close_2.jpg',1)"><img src="images/close_1.jpg" alt="Close Button" name="CButton" border="0" id="CButton" /></a></td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+</table>
+
+</div>
+  
+</body>
+</html>

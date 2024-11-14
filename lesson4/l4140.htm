@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><!-- InstanceBegin template="/Templates/base_layout_audioAutoPlay.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>TSA-WVPP</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../tsa_style.css" title="tsaCSS" />
+<script language="javascript" type="text/javascript" src="../APIWrapper.js"></script>
+<script language="javascript" type="text/javascript" src="../SCOFunctions.js"></script>
+<script language="javascript" type="text/javascript" src="../tsaLMSfunctions.js"></script>
+<script language="javascript" type="text/javascript" src="../tsa_script.js"></script>
+<script language="javascript" type="text/javascript" src="../AC_RunActiveContent.js"></script>
+<script language="javascript">
+	initializePage();
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+<style>
+	.scenario { font-size:12px; }
+</style>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+MM_preloadImages('../images/submit_0.jpg', '../images/submit_2.jpg', '../images/l4140.jpg', '../images/reset_0.jpg', '../images/reset_2.jpg', '../images/l4140a.jpg', '../images/l4140b.jpg', '../images/l4140c.jpg');
+
+function startPage() {
+	document.getElementById("next").style.visibility = "hidden"
+	startTimer();
+	init();
+	if (inLMS == "yes") {
+		if ( isPageViewed(getPage()) ) {
+			//show prompt and next button
+			showNext();
+		}
+	}
+	document.getElementById("pause1").style.visibility = "visible";
+	document.getElementById("replay").style.visibility = "visible";
+	document.getElementById("cc").style.visibility = "visible";
+}
+
+function dragObj(id, dragNum, imgName) {
+	this.id = id;
+	this.imgName = imgName;
+	this.dragNum = dragNum;
+	this.ini_x = 0;
+	this.ini_y = 0;
+	this.width = 0;
+	this.height = 0;
+}
+
+function targObj(id) {
+	this.id = id;
+	this.target_x = 0;
+	this.target_y = 0;
+	this.width = 0;
+	this.height = 0;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="startPage();MM_preloadImages('../images/submit_2.jpg','../images/reset_2.jpg')" onUnload="if (closing) exitCourse(false)">
+<br />
+<div id="wrapper">
+<!-- InstanceBeginEditable name="Edit_PageSetup" -->
+
+<script language="JavaScript" type="text/javascript">
+<!--
+noInteraction = false;
+var autoRun = false;
+var nextPage = "l4150.htm";
+var prvPage = "l4130.htm";
+var menuPage = "../m01_mainmenu.htm"
+
+//************** Audio functions **************
+var currentAudio = "0";
+var aNum = "0";	
+function playAudio(id) { //aNum = audio number
+	aNum = id;
+	MM_controlShockwave(currentAudio,'','StopPlay');
+	MM_controlShockwave(aNum,'','Play');
+	currentAudio = aNum;
+}
+
+function aPlay() {
+	MM_controlShockwave(aNum,'','Play');	
+	document.getElementById("play1").style.visibility = "hidden";
+	document.getElementById("play2").style.visibility = "visible";
+	document.getElementById("pause2").style.visibility = "hidden";
+	document.getElementById("pause1").style.visibility = "visible";
+}
+
+function aPause() {
+	MM_controlShockwave(aNum,'','StopPlay');
+	document.getElementById("play2").style.visibility = "hidden";
+	document.getElementById("play1").style.visibility = "visible";
+	document.getElementById("pause1").style.visibility = "hidden";
+	document.getElementById("pause2").style.visibility = "visible";
+}
+
+function aStop() {
+	MM_controlShockwave(aNum,'','StopPlay');
+	MM_controlShockwave(aNum,'','Rewind');
+	document.getElementById("play2").style.visibility = "hidden";
+	document.getElementById("play1").style.visibility = "visible";
+}
+
+function aReplay() {
+	MM_controlShockwave(aNum,'','Rewind');
+	MM_controlShockwave(aNum,'','Play');
+	playAudio('0');		
+	document.getElementById("pause2").style.visibility = "hidden";
+	document.getElementById("pause1").style.visibility = "visible";
+}
+//************** End of Audio functions **************
+
+//************** Interaction *******************
+var nObj = 3;
+var qStatus = 0;
+var userTries = 0;
+var tryLimit = 2;
+var strTargetOrder = "";
+var strDragOrder = "";
+//selectedDrag is the layer that is dragging
+var selectedDrag = null;
+var intDragLayerID;
+var offsetX, offsetY;
+dragObjArray = new Array(nObj);
+targObjArray = new Array(nObj);
+for (var i=1; i <= nObj; i++) {
+	dragObjArray[i-1] = new dragObj('drag'+i, i, 'Drag'+i+'Img');
+	targObjArray[i-1] = new targObj('target'+i);
+}
+var feedbackCorrect = 2;
+var feedbackIncorrect = 3;
+var feedbackIncorrectFinal = 4;
+var feedbackNone = 5;
+
+//set z-index property
+function setzIndex(dragLayer, zOrder) {
+	dragLayer.style.zIndex = zOrder
+}
+
+//position an object at a specific pixel coordinate
+function shiftTo(dragLayer, x, y) {
+	dragLayer.style.pixelLeft = x; dragLayer.style.pixelTop = y;
+}
+
+function moveBack(dragLayer, intID) {
+	shiftTo(dragLayer, dragObjArray[intID-1].ini_x, dragObjArray[intID-1].ini_y)
+}
+
+function moveToTarget(dragLayer, intTargetID) {
+	//intTargetID is actually the target number - 1
+	shiftTo(dragLayer, targObjArray[intTargetID].target_x, targObjArray[intTargetID].target_y)
+}
+
+function setSelectedElem(e) {
+	imgObj = window.event.srcElement	//image object
+	testObj = imgObj.parentElement	//draggable layer
+	//see if the user clicked on a valid layer
+	for (i=0; i<nObj; i++) {
+		if (imgObj.name == dragObjArray[i].imgName && testObj) {
+			selectedDrag = testObj
+			intDragLayerID = dragObjArray[i].dragNum
+			setzIndex(selectedDrag,100)
+			return
+		}
+	}
+}
+
+function dragItem(e) {
+	if (selectedDrag) {
+		winW = document.body.offsetWidth;
+		difference = (winW/2);
+		x = event.clientX - offsetX;
+		y = event.clientY - offsetY;
+		shiftTo(selectedDrag, x, y);
+		//prevent further system response to dragging
+		return false
+	}
+}
+
+function grabItem(e) {
+	setSelectedElem(e)
+	if (selectedDrag) {
+		//MM_showHideLayers('feedback','','hide');
+		MM_showHideLayers('done','','show');
+		winW = document.body.offsetWidth;
+		difference = (winW-800)/2; 
+		offsetX = window.event.offsetX+(difference);
+		offsetY = window.event.offsetY+25;
+	}
+	//prevent further processing of mouseDown event so that the Macintosh doesn't
+	//display the contextual menu and lets dragging work normally
+	return false
+}
+
+function releaseItem(e) {
+	if (selectedDrag) {
+		//determine where user released mouse button
+		var releaseX, releaseY;
+		difference = (winW-800)/2; 
+		releaseX = window.event.clientX-difference
+		releaseY = window.event.clientY-25
+		for (var i=0; i<nObj; i++) {	//for each target
+			//check to see if there is any match
+			if ( (releaseX > targObjArray[i].target_x) && (releaseX < targObjArray[i].target_x+targObjArray[i].width) && (releaseY > targObjArray[i].target_y) && (releaseY < targObjArray[i].target_y + targObjArray[i].height) ) {
+				if (strTargetOrder.indexOf((i+1)+",") == -1) {
+					moveToTarget(selectedDrag, i)
+					//check to see if an object is already in the dragged list. If it is, it's been moved from one target to another
+					intTemp = strDragOrder.indexOf(intDragLayerID + ",")
+					if (intTemp != -1) {
+						// remove from matched list first
+						strTargetOrder = strTargetOrder.substring(0,intTemp) + strTargetOrder.substring(intTemp+2,strTargetOrder.length)
+						strDragOrder = strDragOrder.substring(0,intTemp) + strDragOrder.substring(intTemp+2,strDragOrder.length)
+					}
+					// add to matched list
+					strTargetOrder = strTargetOrder + (i+1) + ","
+					strDragOrder = strDragOrder + intDragLayerID.toString() + ","
+				} else moveBack(selectedDrag, intDragLayerID)
+				break
+			} else {
+				moveBack(selectedDrag, intDragLayerID)
+				intTemp = strDragOrder.indexOf(intDragLayerID + ",")
+				if (intTemp != -1) {
+					// remove from matched list
+					strTargetOrder = strTargetOrder.substring(0,intTemp) + strTargetOrder.substring(intTemp+2,strTargetOrder.length)
+					strDragOrder = strDragOrder.substring(0,intTemp) + strDragOrder.substring(intTemp+2,strDragOrder.length)
+				}
+			}
+		}
+		//turn off drag
+		setzIndex(selectedDrag, 1)
+		selectedDrag = null
+	}
+}
+
+function judgeInteraction() {
+	MM_showHideLayers('done','','hide');
+	if (strDragOrder.length == 0) {
+		//document.getElementById("fdbkText").innerHTML = feedbackNone;
+		intFeedback = feedbackNone;
+	} else {
+		userTries += 1;
+		if (userTries > tryLimit) return	//do nothing, Exit the function.
+		if ( (strTargetOrder == strDragOrder) && (strDragOrder.length/2 == nObj) ) {
+			qStatus = 1
+			//disable interaction
+			disableDrag();
+			intFeedback = feedbackCorrect;
+			userTries = tryLimit;
+			playAudio('1')	//Correct
+			document.getElementById("reset").style.visibility = "hidden";
+			showNext();
+		} else if (userTries == tryLimit) {
+			// move to correct location
+			for (var i=0; i<nObj; i++) eval("moveToTarget(drag" + (i+1) + ", " + i + ")")
+			//disable interaction
+			disableDrag();
+			intFeedback = feedbackIncorrectFinal;
+			playAudio('3')	//Final incorrect
+			document.getElementById("reset").style.visibility = "hidden";
+			showNext();
+		} else {
+			// move back incorrect ones
+			var strTempD = strDragOrder;
+			var strTempT = strTargetOrder;
+			for (var i=0; i<strTargetOrder.length/2; i++) {
+				var strTemp = strDragOrder.substr(i*2,1);
+				if (strTargetOrder.substr(i*2,1) != strTemp ) {
+					eval("moveBack(drag" + strTemp + ", " + strTemp + ")")
+					intTemp = strTempD.indexOf(strTemp + ",")
+					if (intTemp != -1) {
+						// remove from matched list
+						strTempD = strTempD.substring(0,intTemp) + strTempD.substring(intTemp+2,strTempD.length)
+						strTempT = strTempT.substring(0,intTemp) + strTempT.substring(intTemp+2,strTempT.length)
+					}
+				}
+			}
+			intFeedback = feedbackIncorrect;
+			strDragOrder = strTempD;
+			strTargetOrder = strTempT;
+			playAudio('2')	//First incorrect
+		}
+	}
+	showPopup(intFeedback);
+}
+
+function resetQ() {
+	for (var i=1; i<=nObj; i++) {
+		eval("moveBack(drag" + i + ", " + i + ")")
+	}
+	strDragOrder = "";
+	strTargetOrder = "";
+}
+
+function init() {
+	var dragStyle, targetStyle;
+	for (var i=0; i<nObj; i++) {
+		/***** Get initial positions *****/
+		//drag layers
+		eval("dragStyle = document.getElementById('drag" + (i+1) + "').style");
+		dragObjArray[i].ini_x = dragStyle.pixelLeft;
+		dragObjArray[i].ini_y = dragStyle.pixelTop;
+		eval("dragObjArray[" + i + "].width = document.getElementById('drag" + (i+1) + "').offsetWidth");	
+		eval("dragObjArray[" + i + "].height = document.getElementById('drag" + (i+1) + "').offsetHeight");
+		//target layers
+		eval("targetStyle = document.getElementById('target" + (i+1) + "').style");
+		targObjArray[i].target_x = targetStyle.pixelLeft;
+		targObjArray[i].target_y = targetStyle.pixelTop;
+		eval("targObjArray[" + i + "].width = document.getElementById('target" + (i+1) + "').offsetWidth");	
+		eval("targObjArray[" + i + "].height = document.getElementById('target" + (i+1) + "').offsetHeight");
+	}
+
+	//Initialize mouse events
+	document.onmousedown = grabItem;
+	document.onmousemove = dragItem;
+	document.onmouseup = releaseItem;
+}
+
+function disableDrag() {
+	document.onmousedown = null;
+	document.onmousemove = null;
+	document.onmouseup = null;
+}
+
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_ModuleTitle" -->
+<div id="modTitle">
+  <div align="left">Preventing Workplace Violence</div>
+</div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_PageNumber" -->
+<div id="pageNumber">Screen 14 of 17</div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_PageTitle" -->
+<div id="pageTitle">
+  <div align="left">KNOWLEDGE CHECK</div>
+</div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_Prompt" -->
+<div id="prompt">Select the <b>Next</b> Button to continue.</div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_fullContentArea" -->
+<div id="fullContentArea">
+  <div align="left">Match the action with the person responsible by dragging each  role on the right to the correct responsibility <br />on the left. Select the <strong>Submit </strong>Button to receive feedback.</div>
+</div>
+<!-- Flash Audio Object -->
+<div id="flashAudio">
+  	<script type="text/javascript">
+AC_FL_RunContent( 'name','swfFile','width','1','height','1','id','swfFile','src','../audios/l4140a','loop','false','quality','high','play','true','swliveconnect','true','movie','../audios/l4140a' ); //end AC code
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="swfFile" width="1" height="1" id="swfFile">
+    <param name="movie" value="../audios/l4140a.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="true" />
+    <embed src="../audios/l4140a.swf" width="18" height="18" wmode="transparent" loop="False" quality="high" type="application/x-shockwave-flash" name="swfFile" play="true" swliveconnect="true"></embed>
+    </object></noscript>
+</div>
+
+<div id="correctAudio" style="position:absolute; top:100; left:-100px; width:2px; height:2px;">
+  	<script type="text/javascript">
+AC_FL_RunContent( 'name','audio2','width','1','height','1','id','audio2','src','../audios/l4140b','loop','false','quality','high','play','false','swliveconnect','true','movie','../audios/l4140b' ); //end AC code
+</script><noscript>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="audio2" width="1" height="1" id="audio2">
+    <param name="movie" value="../audios/l4140b.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="false" />
+    <embed src="../audios/l4140b.swf" width="18" height="18" wmode="transparent" loop="False" quality="high" type="application/x-shockwave-flash" name="audio2" play="false" swliveconnect="true"></embed>
+    </object></noscript>
+</div>
+
+<div id="inccorrectAudio1" style="position:absolute; top:100; left:-100px; width:2px; height:2px;">
+  	<script type="text/javascript">
+AC_FL_RunContent( 'name','audio3','width','1','height','1','id','audio3','src','../audios/l4140c','loop','false','quality','high','play','false','swliveconnect','true','movie','../audios/l4140c' ); //end AC code
+</script>
+<noscript>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="audio3" width="1" height="1" id="audio3">
+    <param name="movie" value="../audios/l4140c.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="false" />
+    <embed src="../audios/l4140c.swf" width="18" height="18" wmode="transparent" loop="False" quality="high" type="application/x-shockwave-flash" name="audio3" play="false" swliveconnect="true"></embed>
+    </object></noscript>
+</div>
+
+<div id="inccorrectAudio2" style="position:absolute; top:100; left:-100px; width:2px; height:2px;">
+  	<script type="text/javascript">
+AC_FL_RunContent( 'name','audio4','width','1','height','1','id','audio4','src','../audios/l4140d','loop','false','quality','high','play','false','swliveconnect','true','movie','../audios/l4140d' ); //end AC code
+</script>
+<noscript>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="audio4" width="1" height="1" id="audio4">
+    <param name="movie" value="../audios/l4140d.swf" />
+    <param name="quality" value="high" />
+	<param name="LOOP" value="false" />
+	<param name="PLAY" value="false" />
+    <embed src="../audios/l4140d.swf" width="18" height="18" loop="False" wmode="transparent" quality="high" type="application/x-shockwave-flash" name="audio4" play="false" swliveconnect="true"></embed>
+    </object></noscript>
+</div>
+
+<div id="icon1" style="position:absolute; left:647px; top:70px; width:140px; height:49px; z-index:10;">
+<img src="../images/knowledge-icon-l2060.jpg" alt="Knowledge Check Icon" width="150" height="67" /></div>
+
+<!-- End of Flash Audio Object -->
+<div id="gHolder" style="position:absolute; left:64px; top:215px; width:616px; height:319px;"><img src="../images/l4140.jpg" />
+<div id="s1" style="position:absolute; left:209px; top:29px; width:257px; height:21px;" class="scenario">
+  <div align="left">Report inappropriate behavior</div>
+</div>
+
+<div id="s2" style="position:absolute; left:208px; top:75px; width:247px; height:32px;" class="scenario">
+  <div align="left">Receive reports of inappropriate behavior and assess the risk of violence.</div>
+</div>
+
+<div id="s3" style="position:absolute; left:208px; top:126px; width:238px; height:34px;" class="scenario">
+  <div align="left">Create and implement a threat management plan. </div>
+</div>
+</div>
+
+<!--=============== Target position =================-->
+<div id="target3" style="position:absolute; left:75px; top:289px; width:184px; height:36px; z-index:2;"></div>
+<div id="target2" style="position:absolute; left:75px; top:235px; width:184px; height:34px; z-index:2;"></div>
+<div id="target1" style="position:absolute; left:75px; top:340px; width:185px; height:34px; z-index:2;"></div>
+
+<!--=========== Drag items positon ===========-->
+<div id="drag1" style="position:absolute; left:554px; top:238px; width:60px; height:21px; z-index:3;">
+	<img name="Drag1Img" src="../images/l4140a.jpg" width="184" height="34" border="0" alt="Local Assessment &amp; Response (A&amp;R) Team" /></div>
+<div id="drag2" style="position:absolute; left:554px; top:290px; width:48px; height:22px; z-index:3;">
+	<img name="Drag2Img" src="../images/l4140b.jpg" width="184" height="35" border="0" alt="Every Employee" /></div>
+<div id="drag3" style="position:absolute; left:554px; top:342px; width:56px; height:23px; z-index:3;">
+	<img name="Drag3Img" src="../images/l4140c.jpg" width="184" height="33" border="0" alt="Local WVP Coordinator" /></div>
+
+<!-- *********** Done Button ************** -->
+<div id="done" style="position:absolute; left:355px; top:398px; z-index:2;"><a href="javascript:;" onClick="judgeInteraction()" onMouseOver="MM_swapImage('btnDone','','../images/submit_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnDone" name="btnDone" src="../images/submit_0.jpg" alt="Submit Button" width="86" height="30" border="0" /></a></div>
+
+<div id="reset" style="position:absolute; left:448px; top:398px; z-index:2;"><a href="javascript:;" onClick="resetQ()" onMouseOver="MM_swapImage('btnReset','','../images/reset_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnReset" name="btnReset" src="../images/reset_0.jpg" alt="Reset Button" width="86" height="30" border="0" /></a></div>
+
+<!-- *********** Feedback Layer - NOT used *************** -->
+<div id="feedback" style="position:absolute; left:361px; top:487px; width:341px; z-index:3; visibility:hidden;">
+	<div id="fdbkText" class="fbText">Good job! Select Next to continue.</div>
+</div>
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Edit_CC_button" -->
+<!-- InstanceEndEditable -->
+
+<!-- Audio Controls -->
+<div id="play1" style="visibility:hidden;">
+<a href="javascript:aPlay();" onMouseOver="MM_swapImage('btnPlay1','','../images/audio_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/audio_0.jpg" alt="Resume Play" name="btnPlay1" width="38" height="44" border="0" id="btnPlay1" /></a></div>
+
+<div id="play2" style="visibility:visible;">
+<a href="javascript:aPlay();" onMouseOver="MM_swapImage('btnPlay2','','../images/audio_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/audio_2.jpg" alt="Resume Play" name="btnPlay2" width="38" height="44" border="0" id="btnPlay2" /></a></div>
+
+<div id="pause1">
+<a href="javascript:aPause()" onMouseOver="MM_swapImage('btnPause1','','../images/pause_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnPause1" name="btnPause1" src="../images/pause_0.jpg" border="0" alt="Pause" /></a></div>
+
+<div id="pause2">
+<a href="javascript:aPause()" onMouseOver="MM_swapImage('btnPause2','','../images/pause_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnPause2" name="btnPause2" src="../images/pause_2.jpg" border="0" alt="Pause" /></a></div>
+
+<div id="replay">
+<a href="javascript:aReplay()" onMouseOver="MM_swapImage('btnReplay','','../images/refresh_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnReplay" name="btnReplay" src="../images/refresh_0.jpg" border="0" alt="Replay" /></a></div>
+
+<div id="cc">
+<a href="javascript:showPopup(1)" onMouseOver="MM_swapImage('btnCC','','../images/cc_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnCC" name="btnCC" src="../images/cc_0.jpg" border="0" alt="Opens Closed Captioning" /></a></div>
+<!-- End of Audio Controls -->
+
+<div id="next">
+<a href="javascript:goNext()" onMouseOver="MM_swapImage('btnNext','','../images/next_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnNext" name="btnNext" src="../images/next_0.jpg" border="0" alt="Goes to NEXT page" /></a></div>
+
+<!-- This layer is here for review purpose -->
+<div id="tempNext">
+<a href="javascript:goNext()">Next</a></div>
+<!-- End of tempNext -->
+
+<div id="back">
+<a href="javascript:goBack()" onMouseOver="MM_swapImage('btnBack','','../images/back_1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnBack" name="btnBack" src="../images/back_0.jpg" border="0" alt="Goes to previous page" /></a></div>
+
+<!-- Items on top bar -->
+<div id="help">
+<a href="javascript:openHelp()" onMouseOver="MM_swapImage('btnHelp','','../images/help_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnHelp" name="btnHelp" src="../images/help_0.jpg" border="0" alt="Opens a help file" /></a></div>
+
+<div id="glossary">
+<a href="javascript:openGlossary()" onMouseOver="MM_swapImage('btnGlos','','../images/glossary_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnGlos" name="btnGlos" src="../images/glossary_0.jpg" border="0" alt="Opens a glossary window" /></a></div>
+
+<div id="resources">
+<a href="javascript:openResources()" onMouseOver="MM_swapImage('btnRes','','../images/resources_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnRes" name="btnRes" src="../images/resources_0.jpg" border="0" alt="Opens a resources window" /></a></div>
+
+<div id="sitemap">
+<a href="javascript:openSitemap()" onMouseOver="MM_swapImage('btnSM','','../images/siteMap_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnSM" name="btnSM" src="../images/siteMap_0.jpg" border="0" alt="Opens site map" /></a></div>
+
+<div id="menu">
+<a href="javascript:goMenu()" onMouseOver="MM_swapImage('btnMenu','','../images/mainMenu_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnMenu" name="btnMenu" src="../images/mainMenu_0.jpg" width="83" height="15" border="0" alt="Goes to course menu" /></a></div>
+
+<div id="exit">
+<a href="javascript:exitCourse(true)" onMouseOver="MM_swapImage('btnExit','','../images/exit_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img id="btnExit" name="btnExit" src="../images/exit_0.jpg" width="83" height="15" border="0" alt="Exits the course" /></a></div>
+<!-- End of Items on top bar -->
+</div>
+</body>
+<!-- InstanceEnd --></html>

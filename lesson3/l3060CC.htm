@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/popFile.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Popup Information</title>
+<!-- InstanceEndEditable -->
+<link href="../tsa_style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="../tsa_script.js"></script>
+<style>
+	body {
+		background: none;
+		background-color:#ffffff;
+	}
+</style>
+
+<script language="javascript">
+function closePopup() {
+	if (gDef != 1) {
+		window.opener.aStop();
+	}
+	self.close();
+}
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+<!--
+/*
+function hideClose() {
+	if (gDef > 1) {
+		document.getElementById("btnClose").style.visibility = "hidden";
+	}
+}
+window.onload = hideClose();
+*/
+
+var gDef = getQueryValue('popterm')
+var arrPopup = new Array();
+var numTern = 13;
+for (var i=0; i<numTern; i++) {
+	arrPopup[i] = "";
+}
+
+//******* NOTE: Only the first and the last items are used. Others are NOT used. *******//
+arrPopup[1]  = "<p class='popupH'>Audio Transcript</p> <p>An aggressor who engages in either impromptu or intended violence must follow a path of certain behaviors.  The two paths have similarities and differences.  Since the steps along both paths are behaviors, they can be seen and recognized.</p>";
+
+arrPopup[1]  = arrPopup[1] +  "<p>Impromptu violence is a spontaneous, unplanned outburst in which an aggressor moves quickly along the path to violence.</p><p>Select each point along the path to learn more about some of the tell-tale signs associated with impromptu workplace violence.</p> <p>The first step along the path to impromptu violence, grievance, occurs when the aggressor develops a grievance. This does not refer to filing a grievance or entering the formal grievance process that TSA set up.  Rather, it simply means the aggressor believes he or she has been mistreated or has suffered some perceived injustice.  The aggressor may signal that he or she has reached this step through the following types of behaviors:</p><p><ul><li>Expressing unreasonable expectations</li><li>Making inflated demands</li><li>Acting as if a debt of some kind is owed</li><li>Demanding recognition for oneself or one's problem</li><li>Showing unwillingness to be refused</li></ul></p><p>Of course, many individuals have a grievance but do not act violently.  The grievance takes on a new meaning, however, when the aggressor takes the next step along the path to impromptu violence.</p> <p>The second step on the path to impromptu violence, ideation, occurs when the aggressor gets the idea to use violence to resolve the grievance.  The aggressor may signal that he or she has reached this step by the following types of behaviors:</p><p><ul><li>Showing agitation and anger</li><li>Using foul, loud language</li><li>Being argumentative</li><li>Not taking 'No' for an answer</li><li>Making threats or engaging in threatening or intimidating acts</li><li>Using violence toward inanimate objects</li></ul></p> <p>The third step on the path to impromptu violence, breach, occurs when the aggressor gets physically close enough to the target to use violence.  The aggressor may signal that he or she has reached this step by the following types of behaviors:</p><p><ul><li>Refusing to obey instructions</li><li>Moving toward the target</li><li>Making an effort to overcome any barrier between the aggressor and the target</li><li>Grabbing a nearby weapon of opportunity</li></ul></p> <p>The last step along the path to impromptu violence, attack, occurs when the aggressor uses violence against the target.</p>";
+
+
+//-->
+</script>
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="MM_preloadImages('../images/close_2.jpg')">
+<div id="noGraphicPopupText" style="position:relative; top:20px; left:-5px; width:550px; height:200px; text-align:left">
+  <p align="left" class="popupH">&nbsp;</p>
+  <script language="javascript" type="text/javascript" >
+		document.getElementById('noGraphicPopupText').innerHTML = arrPopup[gDef];
+    </script>
+  
+  <div id="btnClose" class="CloseButton">
+  	<p>&nbsp;</p>
+    <div align="center"><a href="javascript:closePopup();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('CButton','','../images/close_2.jpg',1)"><img src="../images/close_1.jpg" alt="Close Button" name="CButton" border="0" id="CButton" /></a></div>
+    <br />
+  </div>
+
+</div>
+
+<!-- InstanceBeginEditable name="ForScript" -->
+<script type="text/javascript">
+//	if (gDef > 1) {
+//		document.getElementById("btnClose").style.visibility = "hidden";
+//	}
+</script>
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
